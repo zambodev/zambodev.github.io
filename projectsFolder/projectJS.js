@@ -21,7 +21,7 @@ getData()
             cell[index1] = row.insertCell();
             
             if(obj[index1 - 1].language == null) {
-                cell[index1].innerHTML = "Nan";
+                cell[index1].innerHTML = "No language";
             } else {
                 cell[index1].innerHTML = obj[index1 - 1].language;
             }
