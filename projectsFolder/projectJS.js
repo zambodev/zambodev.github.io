@@ -19,7 +19,12 @@ getData()
             cell[index1] = row.insertCell();
             cell[index1].innerHTML = obj[index1 - 1].name;
             cell[index1] = row.insertCell();
-            cell[index1].innerHTML = obj[index1 - 1].language;
+            
+            if(obj[index1 - 1].language == null) {
+                cell[index1].innerHTML = "Nan";
+            } else {
+                cell[index1].innerHTML = obj[index1 - 1].language;
+            }
 
             var str = "GitHub";
             var a = str.link(obj[index1 - 1].html_url);
