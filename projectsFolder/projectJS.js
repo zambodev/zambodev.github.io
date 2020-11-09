@@ -9,7 +9,7 @@ async function getData() {
 
 getData()
     .then((obj) => {
-
+        
         while (mainTable.rows[1]) {
             mainTable.rows[1].remove();
         }
