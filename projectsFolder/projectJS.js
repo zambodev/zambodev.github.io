@@ -1,7 +1,7 @@
 var mainTable = document.getElementById("mainTable");
 
 async function getData() {
-    let response = await fetch(`https://api.github.com/users/GiovanniNeve/repos`);
+    let response = await fetch(`https://api.github.com/users/Zambo-dev/repos`);
     let obj = await response.json();
 
     return obj;
