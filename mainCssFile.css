@@ -6,26 +6,27 @@ body {
 /* ---------- Text ---------- */
 
 h1 {
-    font-size: 96px;
+    margin-top: 10vh;
+    font-size: 10vw;
     color: white;
     text-align: center;
 }
 
 h4 {
-    font-size: 36px;
+    font-size: 6vw;
     color: white;
     text-align: center;
     margin-bottom: 1%;
 }
 
 h6 {
-    font-size: 28px;
+    font-size: 6vw;
     color: white;
     text-align: center;
 }
 
 a {
-    font-size: 36px;
+    font-size: 6vw;
     font-weight: 300;
     color: white;
     text-decoration: none;
@@ -36,13 +37,13 @@ a:hover {
 }
 
 p {
-    font-size: 20px;
+    font-size: 4.5vw;
     color: white;
     text-align: center;
 }
 
 .contactHref {
-    font-size: 20px;
+    font-size: 4.5vw;
 }
 
 .mainLink {
@@ -76,7 +77,7 @@ p {
 #goBackFlexbox {
     display: flex;
     justify-content: flex-start;
-    height: 36px;
+    height: 6vw;
     margin-left: 2%;
 }
 
@@ -84,7 +85,7 @@ p {
 
 table {
     width: 50%;
-    font-size: 24px;
+    font-size: 4.5vw;
     color: white;
     border-collapse: separate;
 }
@@ -96,7 +97,7 @@ td {
 }
 
 table a {
-    font-size: 24px;
+    font-size: 4.5vw;
     color: lightblue;
 }
 
