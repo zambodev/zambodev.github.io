@@ -101,3 +101,66 @@ table a {
     color: lightblue;
 }
 
+/* ---------- Animation ---------- */
+
+.animation {
+    color: white;
+    font-size: 100px;
+    margin: 0 auto;
+    width: 400px;
+  }
+  
+  /* Real glitch effect */
+  .animation {
+    position: relative;
+  }
+  
+  .animation:after {
+    animation: glitchAnimation 2s infinite linear alternate-reverse;
+    background: black;
+    color: white;
+    content: attr( data-text );
+    left: 3px;
+    overflow: hidden;
+    position: absolute;
+    text-shadow: 1px 0 rgb(0, 255, 242);
+  }
+
+
+  /* Expanded Animations */
+  @keyframes glitchAnimation {
+    0% {
+      clip: rect(50px, 9999px, 50px, 0);
+    }
+    10% {
+      clip: rect(40px, 9999px, 60px, 0);
+    }
+    20% {
+      clip: rect(30px, 9999px, 70px, 0);
+    }
+    30% {
+      clip: rect(50px, 9999px, 80px, 0);
+    }
+    40% {
+      clip: rect(40px, 9999px, 90px, 0);
+    }
+    50% {
+      clip: rect(0px, 9999px, 40px, 0);
+    }
+    60% {
+      clip: rect(30px, 9999px, 50px, 0);
+    }
+    70% {
+      clip: rect(40px, 9999px, 70px, 0);
+    }
+    80% {
+      clip: rect(50px, 9999px, 20px, 0);
+    }
+    90% {
+      clip: rect(60px, 9999px, 30px, 0);
+    }
+    100% {
+      clip: rect(70px, 9999px, 70px, 0);
+    }
+  }
+
