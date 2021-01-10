@@ -23,7 +23,7 @@ h4 {
 }
 
 h6 {
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: white;
     text-align: center;
 }
@@ -46,13 +46,15 @@ p {
 }
 
 .contactHref {
-    font-size: 2.5vh;
+    font-size: 1.25rem;
 }
 
 .mainLink {
     padding: 0.5em;
     font-size: 4rem;
+    color: white;
 }
+
 
 #mainText {
     font-size: 7rem;
@@ -93,7 +95,7 @@ p {
 #goBackFlexbox {
     display: flex;
     justify-content: flex-start;
-    height: 3vh;
+    height: 1.5rem;
     margin-left: 2%;
 }
 
@@ -114,14 +116,13 @@ td {
 
 table a {
     font-size: 1.25rem;
-    color: lightblue;
 }
 
 /* ---------- Animation ---------- */
 
 .animation {
     color: white;
-    font-size: 10vh;
+    font-size: 2rem;
     margin: 0 auto;
   }
   
