@@ -3,7 +3,8 @@ body {
     font-family: 'Roboto Mono';
     display: flex;
     flex-direction: column;
-  }
+    margin: 0;
+}
 
 /* ---------- Text ---------- */
 
@@ -54,6 +55,7 @@ p {
 }
 
 #mainText {
+    font-size: 7rem;
     margin-top: 5%;
 }
 
@@ -121,8 +123,6 @@ table a {
     color: white;
     font-size: 10vh;
     margin: 0 auto;
-    width: 40vh;
-    margin-left: 85vh;
   }
   
   /* Real glitch effect */
@@ -131,51 +131,81 @@ table a {
   }
   
   .animation:after {
-    animation: glitchAnimation 2s infinite linear alternate-reverse;
+    animation: glitchAnimation 2s infinite linear;
     background: black;
     color: white;
     content: attr( data-text );
-    left: 0.2vh;
+    left: 3px;
     overflow: hidden;
     position: absolute;
-    text-shadow: 0.2vh 0 rgb(0, 255, 242);
+    text-shadow: 2px 0 rgb(0, 255, 242);
   }
 
 
   /* Expanded Animations */
   @keyframes glitchAnimation {
     0% {
-      clip: rect(5vh, 999vh, 5vh, 0);
+      clip: rect(10px, 9999px, 110px, 0);
+    }
+    1% {
+      clip: rect(30px, 9999px, 90px, 0);
     }
     10% {
-      clip: rect(4vh, 999vh, 6vh, 0);
+      clip: rect(30px, 9999px, 90px, 0);
+    }
+    11% {
+      clip: rect(50px, 9999px, 50px, 0);
     }
     20% {
-      clip: rect(3vh, 999vh, 7vh, 0);
+      clip: rect(50px, 9999px, 50px, 0);
+    }
+    21% {
+      clip: rect(70px, 9999px, 80px, 0);
     }
     30% {
-      clip: rect(5vh, 999vh, 8vh, 0);
+      clip: rect(70px, 9999px, 80px, 0);
+    }
+    31% {
+      clip: rect(80px, 9999px, 100px, 0);
     }
     40% {
-      clip: rect(4vh, 999vh, 9vh, 0);
+      clip: rect(80px, 9999px, 100px, 0);
+    }
+    41% {
+      clip: rect(110px, 9999px, 110px, 0);
     }
     50% {
-      clip: rect(0vh, 999vh, 4vh, 0);
+      clip: rect(110px, 9999px, 110px, 0);
+    }
+    51% {
+      clip: rect(90px, 9999px, 100px, 0);
     }
     60% {
-      clip: rect(3vh, 999vh, 5vh, 0);
+      clip: rect(90px, 9999px, 100px, 0);
+    }
+    61% {
+      clip: rect(50px, 9999px, 90px, 0);
     }
     70% {
-      clip: rect(4vh, 999vh, 7vh, 0);
+      clip: rect(50px, 9999px, 90px, 0);
+    }
+    71% {
+      clip: rect(30px, 9999px, 30px, 0);
     }
     80% {
-      clip: rect(5vh, 999vh, 2vh, 0);
+      clip: rect(30px, 9999px, 30px, 0);
+    }
+    81% {
+      clip: rect(20px, 9999px, 70px, 0);
     }
     90% {
-      clip: rect(6vh, 999vh, 3vh, 0);
+      clip: rect(20px, 9999px, 70px, 0);
+    }
+    91% {
+      clip: rect(10px, 9999px, 110px, 0);
     }
     100% {
-      clip: rect(7vh, 999vh, 7vh, 0);
+      clip: rect(10px, 9999px, 110px, 0);
     }
   }
 
