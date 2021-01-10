@@ -3,7 +3,8 @@ body {
     font-family: 'Roboto Mono';
     display: flex;
     flex-direction: column;
-  }
+    margin: 0;
+}
 
 /* ---------- Text ---------- */
 
@@ -54,6 +55,7 @@ p {
 }
 
 #mainText {
+    font-size: 7rem;
     margin-top: 5%;
 }
 
