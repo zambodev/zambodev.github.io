@@ -55,15 +55,14 @@ p {
     text-decoration: none;
 }
 
+.homeButton {
+  margin: 1em;
+  text-decoration: none;
+}
 
 #mainText {
     font-size: 7rem;
     margin-top: 5%;
-}
-
-.homeButton {
-  margin: 1em;
-  text-decoration: none;
 }
 
 /* ---------- Flexbox ---------- */
@@ -109,8 +108,7 @@ table {
     border-collapse: separate;
 }
 
-table th,
-td {
+table th, td {
     text-align: left;
     padding: 2%;
 }
@@ -128,7 +126,6 @@ table a {
     margin: 0 auto;
   }
   
-  /* Real glitch effect */
   .animation {
     position: relative;
   }
@@ -144,8 +141,6 @@ table a {
     text-shadow: 2px 0 rgb(0, 255, 242);
   }
 
-
-  /* Expanded Animations */
   @keyframes glitchAnimation {
     0% {
       left: 3px;
