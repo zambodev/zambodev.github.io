@@ -6,13 +6,13 @@ async function getData(link) {
 }
 
 function update() {
+    const mainTable = document.getElementById("mainTable");
 
-    if(location.href.split('/').pop() != "index.html") {
+    if(mainTable !== null) {
 
         getData(`https://api.github.com/users/Zambo-dev/repos`)
             .then((obj) => {    
-                var mainTable = document.getElementById("mainTable");
-
+                
                 while (mainTable.rows[1]) {
                     mainTable.rows[1].remove();
                 }
@@ -43,7 +43,7 @@ function update() {
         getData(`https://api.github.com/repos/Zambo-dev/Zambo-dev.github.io/contributors`)
         .then((obj) => {
             
-            var contributors = document.getElementById("contributorsFlexbox");
+            const contributors = document.getElementById("contributorsFlexbox");
 
             for(var index = 0; index < obj.length; index++) {
             
