@@ -46,8 +46,12 @@ if(location.href.split('/').pop() != "index.html") {
         for(var index = 1; index < obj.length; index++) {
         
             var a = document.createElement('a');
+            var img = document.createElement('img');
+            img.setAttribute('src', obj[index].avatar_url);
+            img.setAttribute('alt', obj[index].login);
+            img.setAttribute('title', obj[index].login);
             a.setAttribute('href', obj[index].html_url);
-            a.innerHTML = obj[index].login;
+            a.appendChild(img);
             document.getElementById("contributorsFlexbox").appendChild(a);
             
         }
