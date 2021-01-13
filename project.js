@@ -1,6 +1,3 @@
-var mainTable = document.getElementById("mainTable");
-var contributors = document.getElementById("contributorsFlexbox");
-
 async function getData(link) {
     let response = await fetch(link);
     let obj = await response.json();
@@ -13,8 +10,9 @@ function update() {
     if(location.href.split('/').pop() != "index.html") {
 
         getData(`https://api.github.com/users/Zambo-dev/repos`)
-            .then((obj) => {
-                
+            .then((obj) => {    
+                var mainTable = document.getElementById("mainTable");
+
                 while (mainTable.rows[1]) {
                     mainTable.rows[1].remove();
                 }
@@ -45,6 +43,8 @@ function update() {
         getData(`https://api.github.com/repos/Zambo-dev/Zambo-dev.github.io/contributors`)
         .then((obj) => {
             
+            var contributors = document.getElementById("contributorsFlexbox");
+
             for(var index = 0; index < obj.length; index++) {
             
                 var a = document.createElement('a');
