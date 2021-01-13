@@ -65,19 +65,37 @@ p {
     margin-top: 5%;
 }
 
+#contributorsFlexbox a {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#contributorsFlexbox h6 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#bottomFlexbox h6 {
+  font-size: 0.9rem;
+  margin-bottom: 0em  ;
+}
+
 /* ---------- Flexbox ---------- */
 
 #bottomFlexbox {
     display: flex;
     justify-content: center;
-    margin-top: 8em;
+    margin: 0em;
+    flex: 1;
+    padding: 0.5em;
+    align-items: flex-end
   }
 
 #flexBox {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 10em 0;
+    margin: 2.5em 0;
 }
 
 #projectFlexbox {
@@ -97,6 +115,14 @@ p {
     justify-content: flex-start;
     height: 1.5rem;
     margin-left: 2%;
+}
+
+#contributorsFlexbox {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4em;
+  margin-bottom: 8em;
+  justify-content: center;
 }
 
 /* ---------- Table ---------- */
