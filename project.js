@@ -43,7 +43,7 @@ if(location.href.split('/').pop() != "index.html") {
     getData(`https://api.github.com/repos/Zambo-dev/Zambo-dev.github.io/contributors`)
     .then((obj) => {
         
-        for(var index = 1; index < obj.length; index++) {
+        for(var index = 0; index < obj.length; index++) {
         
             var a = document.createElement('a');
             var img = document.createElement('img');
@@ -52,7 +52,7 @@ if(location.href.split('/').pop() != "index.html") {
             img.setAttribute('title', obj[index].login);
             a.setAttribute('href', obj[index].html_url);
             a.appendChild(img);
-            document.getElementById("contributorsFlexbox").appendChild(a);
+            document.getElementById("images").appendChild(a);
             
         }
 

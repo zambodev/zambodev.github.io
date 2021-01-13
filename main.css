@@ -68,6 +68,7 @@ p {
 #contributorsFlexbox a {
   font-size: 1.2rem;
   text-align: center;
+
 }
 
 #contributorsFlexbox h6 {
@@ -78,6 +79,11 @@ p {
 #contributorsFlexbox img {
   width: 2.5em;
   border-radius: 9999px;
+}
+
+#images {
+  display: flex;
+  justify-content: center;
 }
 
 #bottomFlexbox h6 {
@@ -128,6 +134,84 @@ p {
   margin-top: 8em;
   margin-bottom: 4em;
   justify-content: center;
+}
+
+/* ---------- Media Queries ---------- */
+
+@media screen and (max-width: 700px) {
+
+  h1 {
+    font-size: 2.5rem;
+    margin-top: 1.25em;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.75rem;
+  }
+  
+  img {
+    width: 0.5rem;
+  }
+
+  .mainLink {
+    font-size: 2rem;
+  }
+
+  .animation {
+    font-size: 1rem;
+  }
+
+  #mainText {
+    font-size: 4rem;
+  }
+
+  a {
+    font-size: 1.5rem;
+  }
+
+  #aboutMeFlexbox {
+    margin-top: 0em;
+  }
+
+  #contributorsFlexbox {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  table {
+    font-size: 1rem;
+  }
+
+  table th {
+    font-size: 0.8rem;
+  }
+
+  table td {
+    font-size: 0.75rem;
+    padding: 2%;
+    margin: 2%;
+  } 
+
+  td {
+    border-bottom: 1px dashed white;
+  }
+
+  #mainTable a {
+    font-size: 0.75rem;
+  }
+
+  #projectFlexbox {
+    margin: 0em;
+  }
+
 }
 
 /* ---------- Table ---------- */
