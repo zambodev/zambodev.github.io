@@ -1,3 +1,23 @@
+/*
+****************************************
+           Table of contents
+
+           - Typography section
+           - Class section
+           - Id section
+           - Table section
+           - Media Queries section
+           - Animation section
+
+****************************************
+*/
+
+/*
+****************************************
+                 Global
+****************************************
+*/
+
 body {
   background-color: black;
   font-family: 'Roboto Mono';
@@ -6,7 +26,11 @@ body {
   margin: 0;
 }
 
-/* ---------- Text ---------- */
+/*
+****************************************
+           Typography section
+****************************************
+*/
 
 h1 {
   margin-top: 0.5em;
@@ -45,9 +69,11 @@ p {
   text-align: center;
 }
 
-.contactHref {
-  font-size: 1.25rem;
-}
+/*
+****************************************
+              Class section
+****************************************
+*/
 
 .mainLink {
   padding: 0.5em;
@@ -61,40 +87,55 @@ p {
   text-decoration: none;
 }
 
+.contactHref {
+  font-size: 1.25rem;
+}
+
+/*
+****************************************
+               Id section  
+****************************************
+*/
+
 #mainText {
   font-size: 6rem;
   margin-top: 0.5em;
 }
 
-#contributorsFlexbox a {
+#homeLinks {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 2.5em 0;
+}
+
+/* Authors sub-section */
+#authors {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4em;
+  justify-content: center;
+}
+
+#authors a {
   font-size: 1.2rem;
   text-align: center;
 
 }
 
-#contributorsFlexbox h6 {
+#authors h6 {
   margin-top: 1em;
   margin-bottom: 1em;
 }
 
-#contributorsFlexbox img {
+#authors img {
   width: 2.5em;
   border-radius: 9999px;
 }
+/* -------------------- */
 
-#images {
-  display: flex;
-  justify-content: center;
-}
-
-#bottomFlexbox h6 {
-  font-size: 0.9rem;
-  margin-bottom: 0em  ;
-}
-
-/* ---------- Flexbox ---------- */
-
-#bottomFlexbox {
+/* Footer sub-section */
+#footer {
   display: flex;
   justify-content: center;
   margin-top: 2em;
@@ -103,20 +144,32 @@ p {
   align-items: flex-end
   }
 
-#flexBox {
+  #footer h6 {
+    font-size: 0.9rem;
+    margin-bottom: 0em  ;
+  }
+/* -------------------- */
+
+#goBackFlexbox {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin: 2.5em 0;
+  justify-content: flex-start;
+  height: 1.5rem;
+  margin: 2%;
+  margin-top: 0%;
 }
 
-#projectFlexbox {
+#project {
   display: flex;
   justify-content: space-around;
   margin: 1em;
 }
 
-#aboutMeFlexbox {
+#images {
+  display: flex;
+  justify-content: center;
+}
+
+#aboutme {
   display: flex;
   justify-content: space-evenly;
 }
@@ -127,6 +180,7 @@ p {
   width: 50%;
 }
 
+/* Contacts sub-section */
 #contacts {
   display: flex;
   flex-direction: column;
@@ -138,25 +192,42 @@ p {
   margin: 0.5em;
 }
 
-#goBackFlexbox {
-  display: flex;
-  justify-content: flex-start;
-  height: 1.5rem;
-  margin: 2%;
-  margin-top: 0%;
-}
-
-#contributorsFlexbox {
+#social {
   display: flex;
   flex-direction: column;
-  margin-top: 4em;
-  justify-content: center;
 }
 
-/* ---------- Media Queries ---------- */
+/*
+****************************************
+              Table section 
+****************************************
+*/
+
+table {
+  width: 50%;
+  font-size: 1.25rem;
+  color: white;
+  border-collapse: separate;
+}
+
+table th, td {
+  text-align: left;
+  padding: 2%;
+}
+
+table a {
+  font-size: 1.25rem;
+}
+
+/*
+****************************************
+         Media Queries section
+****************************************
+*/
 
 @media screen and (max-width: 700px) {
 
+  /* Text sub-section */
   h1 {
   font-size: 2.5rem;
   margin-top: 1.25em;
@@ -170,14 +241,20 @@ p {
   font-size: 1rem;
   }
 
+  a {
+    font-size: 1.5rem;
+  }
+
   p {
   font-size: 0.75rem;
   }
-  
+  /* -------------------- */
+
   img {
   width: 0.5rem;
   }
 
+  /* Class sub-section */
   .mainLink {
   font-size: 2rem;
   }
@@ -189,21 +266,24 @@ p {
   .contactHref img {
     width: 2rem;
   }
+  /* -------------------- */
 
+  /* Id sub-section */
   #mainText {
     font-size: 4rem;
   }
 
-  a {
-    font-size: 1.5rem;
-  }
-
-  #contributorsFlexbox {
+  #authors {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
   }
 
-  #aboutMeFlexbox {
+  #project {
+    margin: 0em;
+    margin-top: 2em;
+  }
+
+  #aboutme {
     margin: 1em;
     display: flex;
     height: 100%;
@@ -216,12 +296,6 @@ p {
     margin-top: -8em;
   }
 
-  #social {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-  }
-
   #contacts{
     display: flex;
     width: 100%;
@@ -232,6 +306,18 @@ p {
     font-size: 1rem;
   }
 
+  #social {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  #mainTable a {
+    font-size: 0.75rem;
+    }
+  /* -------------------- */
+  
+  /* Table sub-section */
   table {
   font-size: 1rem;
   }
@@ -250,49 +336,25 @@ p {
   border-bottom: 1px dashed white;
   }
 
-  #mainTable a {
-  font-size: 0.75rem;
-  }
-
-  #projectFlexbox {
-  margin: 0em;
-  margin-top: 2em;
-  }
-
 }
 
-/* ---------- Table ---------- */
-
-table {
-  width: 50%;
-  font-size: 1.25rem;
-  color: white;
-  border-collapse: separate;
-}
-
-table th, td {
-  text-align: left;
-  padding: 2%;
-}
-
-table a {
-  font-size: 1.25rem;
-}
-
-
-/* ---------- Animation ---------- */
+/*
+****************************************
+            Animation section 
+****************************************
+*/
 
 .animation {
   color: white;
   font-size: 2rem;
   margin: 0 auto;
-  }
+}
   
-  .animation {
+.animation {
   position: relative;
-  }
+}
   
-  .animation:after {
+.animation:after {
   animation: glitchAnimation 2s infinite linear;
   background: black;
   color: white;
@@ -301,9 +363,9 @@ table a {
   overflow: hidden;
   position: absolute;
   text-shadow: 2px 0 rgb(0, 255, 242);
-  }
+}
 
-  @keyframes glitchAnimation {
+@keyframes glitchAnimation {
   0% {
     left: 3px;
     clip: rect(10px, 9999px, 110px, 0);
@@ -388,5 +450,6 @@ table a {
     left: 3px;
     clip: rect(10px, 9999px, 110px, 0);
   }
-  }
+
+}
 
