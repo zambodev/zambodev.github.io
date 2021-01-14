@@ -186,6 +186,10 @@ p {
     font-size: 1rem;
   }
 
+  .contactHref img {
+    width: 2rem;
+  }
+
   #mainText {
     font-size: 4rem;
   }
@@ -212,7 +216,13 @@ p {
     margin-top: -8em;
   }
 
-  #contacts {
+  #social {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  #contacts{
     display: flex;
     width: 100%;
     margin-top: -6em;
