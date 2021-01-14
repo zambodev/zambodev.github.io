@@ -69,6 +69,11 @@ p {
   text-align: center;
 }
 
+hr {
+  width: 80em;
+  margin: 1em;
+}
+
 /*
 ****************************************
               Class section
@@ -172,6 +177,7 @@ p {
 #aboutme {
   display: flex;
   justify-content: space-evenly;
+  margin: 1em;
 }
 
 #aboutData {
@@ -196,6 +202,25 @@ p {
   display: flex;
   flex-direction: column;
 }
+
+/* Wakatime sub-section */
+#wakatime {
+  display: flex;
+  flex-direction: column;
+}
+
+#wakatime figure {
+  width: 30em;
+}
+/* -------------------- */
+
+#figs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 1em;
+}
+
 
 /*
 ****************************************
