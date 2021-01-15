@@ -69,11 +69,6 @@ p {
   text-align: center;
 }
 
-hr {
-  width: 80em;
-  margin: 1em;
-}
-
 /*
 ****************************************
               Class section
@@ -212,6 +207,13 @@ hr {
 #wakatime figure {
   width: 30em;
 }
+
+#wakatime hr {
+  width: 40em;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
 /* -------------------- */
 
 #figs {
@@ -340,8 +342,31 @@ table a {
   #mainTable a {
     font-size: 0.75rem;
     }
+
+  /* Wakatime sub-section */
+  #wakatime {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #wakatime figure {
+    width: 15em;
+  }
+
+  #wakatime hr {
+    width: 15em;
+    margin: auto;
+    margin-top: 0em;
+    margin-bottom: 0em;
+  }
   /* -------------------- */
   
+  #figs {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
   /* Table sub-section */
   table {
   font-size: 1rem;
