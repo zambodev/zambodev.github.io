@@ -69,6 +69,13 @@ p {
   text-align: center;
 }
 
+hr {
+  width: 40em;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
 /*
 ****************************************
               Class section
@@ -207,13 +214,6 @@ p {
 #wakatime figure {
   width: 30em;
 }
-
-#wakatime hr {
-  width: 40em;
-  margin: auto;
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
 /* -------------------- */
 
 #figs {
@@ -275,6 +275,13 @@ table a {
   p {
   font-size: 0.75rem;
   }
+
+  hr {
+    width: 15em;
+    margin: auto;
+    margin-top: -8em;
+    margin-bottom: 10em;
+  }
   /* -------------------- */
 
   img {
@@ -305,6 +312,10 @@ table a {
     margin-bottom: 1.5em;
   }
 
+  #footer {
+    margin-top: -1em;
+  }
+
   #project {
     margin: 0em;
     margin-top: 2em;
@@ -326,7 +337,7 @@ table a {
   #contacts{
     display: flex;
     width: 100%;
-    margin-top: -6em;
+    margin-top: -9em;
   }
 
   #contacts a {
@@ -347,18 +358,13 @@ table a {
   #wakatime {
     display: flex;
     flex-direction: column;
+    margin-top: -8em;
   }
 
   #wakatime figure {
     width: 15em;
   }
 
-  #wakatime hr {
-    width: 15em;
-    margin: auto;
-    margin-top: 0em;
-    margin-bottom: 0em;
-  }
   /* -------------------- */
   
   #figs {
