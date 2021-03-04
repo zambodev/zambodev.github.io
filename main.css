@@ -185,14 +185,14 @@ hr {
 #aboutData {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 30%;
 }
 
 /* Contacts sub-section */
 #contacts {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 30%;
 }
 
 #contacts a {
@@ -239,7 +239,7 @@ table {
 
 table th, td {
   text-align: left;
-  padding: 2%;
+  padding: 3%;
 }
 
 table a {
@@ -330,8 +330,10 @@ table a {
 
   #aboutData {
     display: flex;
-    width: 100%;
-    margin-top: -8em;
+    margin-left: 2em;
+    margin-right: 2em;
+    width: 80%;
+    margin-top: -12em;
   }
 
   #contacts{
