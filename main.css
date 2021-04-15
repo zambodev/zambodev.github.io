@@ -205,15 +205,6 @@ hr {
   flex-direction: column;
 }
 
-/* Wakatime sub-section */
-#wakatime {
-  display: flex;
-  flex-direction: column;
-}
-
-#wakatime figure {
-  width: 30em;
-}
 /* -------------------- */
 
 #figs {
@@ -351,25 +342,9 @@ table a {
     flex-direction: row;
   }
 
-  #wakatimeSpacer {
-    display: none;
-  }
-
   #mainTable a {
     font-size: 0.75rem;
     }
-
-  /* Wakatime sub-section */
-  #wakatime {
-    display: flex;
-    flex-direction: column;
-    margin-top: -8em;
-    display: none;
-  }
-
-  #wakatime figure {
-    width: 15em;
-  }
 
   /* -------------------- */
   
