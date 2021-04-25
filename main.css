@@ -60,6 +60,11 @@ a {
 }
 
 a:hover {
+  background: -webkit-linear-gradient(60deg, #0b8dc9, #28ebcd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
   color: #00f7ff;
 }
 
@@ -163,8 +168,6 @@ hr {
 #goBackFlexbox {
   display: flex;
   justify-content: flex-start;
-  height: 1.5rem;
-  margin: 2%;
   margin-top: 0%;
 }
 
