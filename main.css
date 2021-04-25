@@ -85,6 +85,7 @@ hr {
 .mainLink {
   padding: 0.5em;
   font-size: 3rem;
+  font-weight: bold;
   color: white;
   text-decoration: none;
 }
@@ -105,8 +106,10 @@ hr {
 */
 
 #mainText {
-  font-size: 6rem;
+  font-size: 8rem;
   margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
 }
 
 #homeLinks {
@@ -235,6 +238,8 @@ table th, td {
 
 table a {
   font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /*
