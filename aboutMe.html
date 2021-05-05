@@ -4,7 +4,7 @@
 
     <title> About Me </title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="style/main.css">
     <meta name="viewport" content="width=device-width">
     <meta charset="UTF-8">
 
@@ -18,9 +18,9 @@
 
     <h1>About Me</h1>
 
-    <div id="aboutme">
+    <div class="aboutme">
     
-        <div id="aboutData">
+        <div class="data">
             <h4>Who am I?</h4>
             <p>My name is Thomas, I'm from Italy and I'm a first year CS student</p>
 
@@ -28,14 +28,25 @@
             <p>I'm a back-end programmer and I code out of passion</p>
         </div>
 
-        <div id="contacts">
+        <div class="contacts">
             <h4>Social</h4>
-            <div id="social">
+            
+            <div class="base_img">
                 <a class="contactHref" href="https://github.com/Zambo-dev"> <img src="images/github.png" alt="GitHub" title="GitHub"> </a>
-                <a class="contactHref" href="https://www.reddit.com/user/zambo_dev"> <img src="images/reddit.png" alt="Reddit" title="Reddit"> </a>
-                <a class="contactHref" href="https://www.instagram.com/thomas.zambelli/"> <img src="images/instagram.png" alt="Instagram" title="Instagram"> </a>
+                <a class="contactHref" id="gradient_img" href="https://github.com/Zambo-dev"> <img src="images/github_g.png" alt="GitHub" title="GitHub"> </a>
             </div>
-        </div>
+
+            <div class="base_img">
+                <a class="contactHref" href="https://www.reddit.com/user/zambo_dev"> <img src="images/reddit.png" alt="Reddit" title="Reddit"> </a>
+                <a class="contactHref" id="gradient_img" href="https://www.reddit.com/user/zambo_dev"> <img src="images/reddit_g.png" alt="Reddit" title="Reddit"> </a>
+            </div>
+
+            <div class="base_img">
+                <a class="contactHref" href="https://www.instagram.com/thomas.zambelli/"> <img src="images/instagram.png" alt="Instagram" title="Instagram"> </a>
+                <a class="contactHref" id="gradient_img" href="https://www.instagram.com/thomas.zambelli/"> <img src="images/instagram_g.png" alt="Instagram" title="Instagram"> </a>
+            </div>
+        
+    </div>
 
     </div>
 

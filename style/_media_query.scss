@@ -1,0 +1,137 @@
+/*
+****************************************
+         Media Queries section
+****************************************
+*/
+
+@media screen and (max-width: 700px) {
+
+    /* Text sub-section */
+    h1 {
+    font-size: 2.5rem;
+    margin-top: 1.25em;
+    }
+  
+    h4 {
+    font-size: 1.25rem;
+    }
+  
+    h6 {
+    font-size: 1rem;
+    }
+  
+    a {
+      font-size: 1.5rem;
+    }
+  
+    p {
+    font-size: 1rem;
+    }
+  
+    hr {
+      width: 15em;
+      margin: auto;
+      margin-top: -8em;
+      margin-bottom: 10em;
+    }
+    /* -------------------- */
+  
+    img {
+    width: 0.5rem;
+    }
+  
+    /* Class sub-section */
+    .mainLink {
+    font-size: 2rem;
+    }
+  
+    .animation {
+      font-size: 1rem;
+    }
+  
+    .contactHref img {
+      width: 2rem;
+    }
+  
+    .aboutme {
+      margin: 1em;
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+    }
+  
+    .data {
+      display: flex;
+      width: 100%;
+      margin-top: -12em;
+    }
+    /* -------------------- */
+  
+    .contacts{
+      display: flex;
+      width: 100%;
+      margin-top: -9em;
+      margin-bottom: -7em;
+  
+      a {
+        font-size: 1rem;
+      }
+    }
+  
+    /* Id sub-section */
+    #mainText {
+      font-size: 4rem;
+    }
+  
+    #authors {
+      margin-top: 1.5em;
+      margin-bottom: 1.5em;
+    }
+  
+    #footer {
+      margin-top: -1em;
+    }
+  
+    #project {
+      margin: 0em;
+      margin-top: 2em;
+    }
+  
+    .social {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+  
+      a {
+        width: 2rem;
+      }
+    }
+  
+    /* -------------------- */
+    
+    #figs {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  
+    /* Table sub-section */
+    table {
+      font-size: 1rem;
+  
+      th {
+        font-size: 0.8rem;
+      }
+  
+      td {
+        font-size: 0.75rem;
+        padding: 2%;
+        margin: 2%;
+      } 
+    }
+    
+    td {
+      border-bottom: 1px dashed white;
+    }
+  
+  }

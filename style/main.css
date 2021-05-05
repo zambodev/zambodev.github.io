@@ -1,0 +1,635 @@
+/*
+****************************************
+           Table of contents
+
+           - Typography section
+           - Class section
+           - Id section
+           - Table section
+           - Media Queries section
+           - Animation section
+
+****************************************
+*/
+/*
+****************************************
+                 Global
+****************************************
+*/
+body {
+  background-color: black;
+  font-family: 'Roboto Mono';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+}
+
+/*
+****************************************
+           Typography section
+****************************************
+*/
+h1 {
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+h6 {
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+}
+
+a {
+  font-size: 2rem;
+  font-weight: 300;
+  color: white;
+}
+
+a:hover {
+  background: -webkit-linear-gradient(60deg, #0b8dc9, #28ebcd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #00f7ff;
+}
+
+p {
+  font-size: 1.25rem;
+  color: white;
+  text-align: center;
+}
+
+hr {
+  width: 40em;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+/*
+****************************************
+              Class section
+****************************************
+*/
+.homeLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 2.5em 0;
+}
+
+.homeLinks a {
+  padding: 0.5em;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.homeButton {
+  margin: 1em;
+  text-decoration: none;
+}
+
+.contactHref {
+  font-size: 1.25rem;
+}
+
+/* Authors sub-section */
+.authors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 4em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.authors a {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.authors h6 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.authors img {
+  width: 2.5em;
+  border-radius: 9999px;
+}
+
+/* -------------------- */
+/* Footer sub-section */
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0.5em;
+  -webkit-box-align: flex-end h6;
+      -ms-flex-align: flex-end h6;
+          align-items: flex-end h6;
+  align-items-font-size: 0.9rem;
+  align-items-margin-bottom: 0em;
+}
+
+/* -------------------- */
+/* Contacts sub-section */
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+}
+
+.contacts a {
+  width: 48px;
+  height: 48px;
+  margin-top: 0.7em;
+}
+
+.contacts .base_img {
+  position: relative;
+  display: inline-block;
+}
+
+.contacts .base_img #gradient_img {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  margin-top: 0em;
+}
+
+.contacts .base_img:hover #gradient_img {
+  display: inline;
+}
+
+/* -------------------- */
+.aboutme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 1em;
+}
+
+.data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 30%;
+}
+
+/*
+****************************************
+               Id section  
+****************************************
+*/
+#mainText {
+  font-size: 8rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+#goBackFlexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 0%;
+}
+
+#project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 1em;
+}
+
+/* -------------------- */
+#figs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 1em;
+}
+
+/* -------------------- */
+/*
+****************************************
+              Table section 
+****************************************
+*/
+table {
+  width: 50%;
+  font-size: 1.25rem;
+  color: white;
+  border-collapse: separate;
+}
+
+table th, table td {
+  text-align: left;
+  padding: 3%;
+}
+
+table a {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/*
+****************************************
+         Media Queries section
+****************************************
+*/
+@media screen and (max-width: 700px) {
+  /* Text sub-section */
+  h1 {
+    font-size: 2.5rem;
+    margin-top: 1.25em;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+  a {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  hr {
+    width: 15em;
+    margin: auto;
+    margin-top: -8em;
+    margin-bottom: 10em;
+  }
+  /* -------------------- */
+  img {
+    width: 0.5rem;
+  }
+  /* Class sub-section */
+  .mainLink {
+    font-size: 2rem;
+  }
+  .animation {
+    font-size: 1rem;
+  }
+  .contactHref img {
+    width: 2rem;
+  }
+  .aboutme {
+    margin: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .data {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-top: -12em;
+  }
+  /* -------------------- */
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-top: -9em;
+    margin-bottom: -7em;
+  }
+  .contacts a {
+    font-size: 1rem;
+  }
+  /* Id sub-section */
+  #mainText {
+    font-size: 4rem;
+  }
+  #authors {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  #footer {
+    margin-top: -1em;
+  }
+  #project {
+    margin: 0em;
+    margin-top: 2em;
+  }
+  .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .social a {
+    width: 2rem;
+  }
+  /* -------------------- */
+  #figs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  /* Table sub-section */
+  table {
+    font-size: 1rem;
+  }
+  table th {
+    font-size: 0.8rem;
+  }
+  table td {
+    font-size: 0.75rem;
+    padding: 2%;
+    margin: 2%;
+  }
+  td {
+    border-bottom: 1px dashed white;
+  }
+}
+
+/*
+****************************************
+            Animation section 
+****************************************
+*/
+.animation {
+  color: white;
+  font-size: 2rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.animation:after {
+  -webkit-animation: glitchAnimation 2s infinite linear;
+          animation: glitchAnimation 2s infinite linear;
+  background: black;
+  color: white;
+  content: attr(data-text);
+  left: 3px;
+  overflow: hidden;
+  position: absolute;
+  text-shadow: 2px 0 #00fff2;
+}
+
+@-webkit-keyframes glitchAnimation {
+  0% {
+    left: 3px;
+    clip: rect(10px, 9999px, 110px, 0);
+  }
+  1% {
+    left: 3px;
+    clip: rect(30px, 9999px, 90px, 0);
+  }
+  10% {
+    left: 3px;
+    clip: rect(30px, 9999px, 90px, 0);
+  }
+  11% {
+    left: 3px;
+    clip: rect(50px, 9999px, 50px, 0);
+  }
+  20% {
+    left: 3px;
+    clip: rect(50px, 9999px, 50px, 0);
+  }
+  21% {
+    left: -3px;
+    clip: rect(70px, 9999px, 80px, 0);
+  }
+  30% {
+    left: -3px;
+    clip: rect(70px, 9999px, 80px, 0);
+  }
+  31% {
+    left: 3px;
+    clip: rect(80px, 9999px, 100px, 0);
+  }
+  40% {
+    left: 3px;
+    clip: rect(80px, 9999px, 100px, 0);
+  }
+  41% {
+    left: 3px;
+    clip: rect(110px, 9999px, 110px, 0);
+  }
+  50% {
+    left: 3px;
+    clip: rect(110px, 9999px, 110px, 0);
+  }
+  51% {
+    left: -3px;
+    clip: rect(90px, 9999px, 100px, 0);
+  }
+  60% {
+    left: -3px;
+    clip: rect(90px, 9999px, 100px, 0);
+  }
+  61% {
+    left: 3px;
+    clip: rect(50px, 9999px, 90px, 0);
+  }
+  70% {
+    left: 3px;
+    clip: rect(50px, 9999px, 90px, 0);
+  }
+  71% {
+    left: 3px;
+    clip: rect(30px, 9999px, 30px, 0);
+  }
+  80% {
+    left: 3px;
+    clip: rect(30px, 9999px, 30px, 0);
+  }
+  81% {
+    left: 3px;
+    clip: rect(20px, 9999px, 70px, 0);
+  }
+  90% {
+    left: 3px;
+    clip: rect(20px, 9999px, 70px, 0);
+  }
+  91% {
+    left: 3px;
+    clip: rect(10px, 9999px, 110px, 0);
+  }
+  100% {
+    left: 3px;
+    clip: rect(10px, 9999px, 110px, 0);
+  }
+}
+
+@keyframes glitchAnimation {
+  0% {
+    left: 3px;
+    clip: rect(10px, 9999px, 110px, 0);
+  }
+  1% {
+    left: 3px;
+    clip: rect(30px, 9999px, 90px, 0);
+  }
+  10% {
+    left: 3px;
+    clip: rect(30px, 9999px, 90px, 0);
+  }
+  11% {
+    left: 3px;
+    clip: rect(50px, 9999px, 50px, 0);
+  }
+  20% {
+    left: 3px;
+    clip: rect(50px, 9999px, 50px, 0);
+  }
+  21% {
+    left: -3px;
+    clip: rect(70px, 9999px, 80px, 0);
+  }
+  30% {
+    left: -3px;
+    clip: rect(70px, 9999px, 80px, 0);
+  }
+  31% {
+    left: 3px;
+    clip: rect(80px, 9999px, 100px, 0);
+  }
+  40% {
+    left: 3px;
+    clip: rect(80px, 9999px, 100px, 0);
+  }
+  41% {
+    left: 3px;
+    clip: rect(110px, 9999px, 110px, 0);
+  }
+  50% {
+    left: 3px;
+    clip: rect(110px, 9999px, 110px, 0);
+  }
+  51% {
+    left: -3px;
+    clip: rect(90px, 9999px, 100px, 0);
+  }
+  60% {
+    left: -3px;
+    clip: rect(90px, 9999px, 100px, 0);
+  }
+  61% {
+    left: 3px;
+    clip: rect(50px, 9999px, 90px, 0);
+  }
+  70% {
+    left: 3px;
+    clip: rect(50px, 9999px, 90px, 0);
+  }
+  71% {
+    left: 3px;
+    clip: rect(30px, 9999px, 30px, 0);
+  }
+  80% {
+    left: 3px;
+    clip: rect(30px, 9999px, 30px, 0);
+  }
+  81% {
+    left: 3px;
+    clip: rect(20px, 9999px, 70px, 0);
+  }
+  90% {
+    left: 3px;
+    clip: rect(20px, 9999px, 70px, 0);
+  }
+  91% {
+    left: 3px;
+    clip: rect(10px, 9999px, 110px, 0);
+  }
+  100% {
+    left: 3px;
+    clip: rect(10px, 9999px, 110px, 0);
+  }
+}
+/*# sourceMappingURL=main.css.map */

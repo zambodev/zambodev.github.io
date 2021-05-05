@@ -1,0 +1,111 @@
+/*
+****************************************
+            Animation section 
+****************************************
+*/
+
+.animation {
+    color: white;
+    font-size: 2rem;
+    margin: 0 auto;
+    position: relative;
+  }
+    
+  .animation:after {
+    animation: glitchAnimation 2s infinite linear;
+    background: black;
+    color: white;
+    content: attr( data-text );
+    left: 3px;
+    overflow: hidden;
+    position: absolute;
+    text-shadow: 2px 0 rgb(0, 255, 242);
+  }
+  
+  @keyframes glitchAnimation {
+    0% {
+      left: 3px;
+      clip: rect(10px, 9999px, 110px, 0);
+    }
+    1% {
+      left: 3px;
+      clip: rect(30px, 9999px, 90px, 0);
+    }
+    10% {
+      left: 3px;
+      clip: rect(30px, 9999px, 90px, 0);
+    }
+    11% {
+      left: 3px;
+      clip: rect(50px, 9999px, 50px, 0);
+    }
+    20% {
+      left: 3px;
+      clip: rect(50px, 9999px, 50px, 0);
+    }
+    21% {
+      left: -3px;
+      clip: rect(70px, 9999px, 80px, 0);
+    }
+    30% {
+      left: -3px;
+      clip: rect(70px, 9999px, 80px, 0);
+    }
+    31% {
+      left: 3px;
+      clip: rect(80px, 9999px, 100px, 0);
+    }
+    40% {
+      left: 3px;
+      clip: rect(80px, 9999px, 100px, 0);
+    }
+    41% {
+      left: 3px;
+      clip: rect(110px, 9999px, 110px, 0);
+    }
+    50% {
+      left: 3px;
+      clip: rect(110px, 9999px, 110px, 0);
+    }
+    51% {
+      left: -3px;
+      clip: rect(90px, 9999px, 100px, 0);
+    }
+    60% {
+      left: -3px;
+      clip: rect(90px, 9999px, 100px, 0);
+    }
+    61% {
+      left: 3px;
+      clip: rect(50px, 9999px, 90px, 0);
+    }
+    70% {
+      left: 3px;
+      clip: rect(50px, 9999px, 90px, 0);
+    }
+    71% {
+      left: 3px;
+      clip: rect(30px, 9999px, 30px, 0);
+    }
+    80% {
+      left: 3px;
+      clip: rect(30px, 9999px, 30px, 0);
+    }
+    81% {
+      left: 3px;
+      clip: rect(20px, 9999px, 70px, 0);
+    }
+    90% {
+      left: 3px;
+      clip: rect(20px, 9999px, 70px, 0);
+    }
+    91% {
+      left: 3px;
+      clip: rect(10px, 9999px, 110px, 0);
+    }
+    100% {
+      left: 3px;
+      clip: rect(10px, 9999px, 110px, 0);
+    }
+  
+  }
