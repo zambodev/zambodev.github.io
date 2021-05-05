@@ -431,7 +431,7 @@ table a {
     margin: 2%;
   }
   td {
-    border-bottom: 1px dashed white;
+    border-top: 1px dashed white;
   }
 }
 
