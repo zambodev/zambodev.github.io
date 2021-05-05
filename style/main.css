@@ -375,6 +375,9 @@ table a {
   .contacts a {
     font-size: 1rem;
   }
+  .contacts .base_img {
+    margin-bottom: 1em;
+  }
   /* Id sub-section */
   #mainText {
     font-size: 4rem;
@@ -389,21 +392,6 @@ table a {
   #project {
     margin: 0em;
     margin-top: 2em;
-  }
-  .social {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .social a {
-    width: 2rem;
   }
   /* -------------------- */
   #figs {

@@ -76,6 +76,10 @@
       a {
         font-size: 1rem;
       }
+
+      .base_img {
+        margin-bottom: 1em;
+      }
     }
   
     /* Id sub-section */
@@ -95,16 +99,6 @@
     #project {
       margin: 0em;
       margin-top: 2em;
-    }
-  
-    .social {
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-  
-      a {
-        width: 2rem;
-      }
     }
   
     /* -------------------- */
