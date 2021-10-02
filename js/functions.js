@@ -5,6 +5,13 @@ async function getData(link) {
     return obj;
 }
 
+function parseDate(date) {
+    const month = date.getMonth() + 1;
+    const data_str = date.getUTCDate() + "-" + month + "-" + date.getFullYear();
+    console.log(data_str);
+    return data_str;
+}
+
 function update() {
     const mainTable = document.getElementById("mainTable");
 
@@ -13,6 +20,15 @@ function update() {
         getData(`https://api.github.com/users/Zambo-dev/repos`)
             .then((obj) => {    
                 
+                console.log(obj.sort( (a, b) => {
+                    if(Date.parse(a.updated_at) > Date.parse(b.updated_at))
+                        return -1;
+                    if(Date.parse(a.updated_at) < Date.parse(b.updated_at))
+                        return 1;
+                    else 
+                        return 0;
+                }));
+
                 while (mainTable.rows[1]) {
                     mainTable.rows[1].remove();
                 }
@@ -28,6 +44,9 @@ function update() {
                     } else {
                         cell[index1].innerHTML = obj[index1 - 1].language;
                     }
+                    
+                    cell[index1] = row.insertCell();
+                    cell[index1].innerHTML = parseDate(new Date(obj[index1 -1].updated_at));
 
                     var str = "GitHub";
                     var a = str.link(obj[index1 - 1].html_url);
