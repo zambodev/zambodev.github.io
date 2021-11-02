@@ -8,9 +8,15 @@ async function getData(link) {
 function parseDate(date) {
     const month = date.getMonth() + 1;
     const data_str = date.getUTCDate() + "-" + month + "-" + date.getFullYear();
-    console.log(data_str);
     return data_str;
 }
+
+function isMobile() {
+    if(window.innerWidth <= 800)
+        return true;
+    else
+        return false;
+  }
 
 function update() {
     const mainTable = document.getElementById("mainTable");
@@ -19,15 +25,6 @@ function update() {
 
         getData(`https://api.github.com/users/Zambo-dev/repos`)
             .then((obj) => {    
-                
-                console.log(obj.sort( (a, b) => {
-                    if(Date.parse(a.updated_at) > Date.parse(b.updated_at))
-                        return -1;
-                    if(Date.parse(a.updated_at) < Date.parse(b.updated_at))
-                        return 1;
-                    else 
-                        return 0;
-                }));
 
                 while (mainTable.rows[1]) {
                     mainTable.rows[1].remove();
@@ -45,8 +42,18 @@ function update() {
                         cell[index1].innerHTML = obj[index1 - 1].language;
                     }
                     
-                    cell[index1] = row.insertCell();
-                    cell[index1].innerHTML = parseDate(new Date(obj[index1 -1].updated_at));
+                    if(!isMobile()) {
+                        cell[index1] = row.insertCell();
+                        cell[index1].innerHTML = parseDate(new Date(obj[index1 -1].updated_at));
+                    }
+                    else
+                    {
+                        var last_commit = document.getElementById("commit");
+                        last_commit.style.display = "none";
+                        
+                        var language = document.getElementById("lang");
+                        language.innerHTML = "Lang";
+                    }
 
                     var str = "GitHub";
                     var a = str.link(obj[index1 - 1].html_url);
