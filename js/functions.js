@@ -18,6 +18,22 @@ function isMobile() {
         return false;
   }
 
+function sort(obj) {
+    for(var i=0; i < obj.length; i++) {
+        for(var j=1; j < obj.length; j++) {
+            var t1 = new Date(obj[j].updated_at);
+            var t2 = new Date(obj[j-1].updated_at);
+            if(t1 > t2) {
+                var tmp = obj[j];
+                obj[j] = obj[j-1];
+                obj[j-1] = tmp;
+            }
+        }
+    }
+
+    return obj;
+}
+
 function update() {
     const mainTable = document.getElementById("mainTable");
 
@@ -25,6 +41,8 @@ function update() {
 
         getData(`https://api.github.com/users/Zambo-dev/repos`)
             .then((obj) => {    
+                
+                var obj = sort(obj);
 
                 while (mainTable.rows[1]) {
                     mainTable.rows[1].remove();
