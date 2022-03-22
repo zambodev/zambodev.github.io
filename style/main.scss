@@ -111,36 +111,13 @@ hr {
   font-size: 1.25rem;
 }
 
-/* Authors sub-section */
-.authors {
-  display: flex;
-  flex-direction: column;
-  margin-top: 4em;
-  justify-content: center;
-  align-items: center;
-
-  a {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  h6 {
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-
-  img {
-    width: 2.5em;
-    border-radius: 9999px;
-  }
-}
 /* -------------------- */
 
 /* Footer sub-section */
 .footer {
   display: flex;
   justify-content: center;
-  margin-top: 2em;
+  margin-top: 10em;
   flex: 1;
   padding: 0.5em;
   align-items: flex-end
