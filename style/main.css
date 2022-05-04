@@ -1,451 +1,203 @@
 /*
 ****************************************
-           Table of contents
-
-           - Typography section
-           - Class section
-           - Id section
-           - Table section
-           - Media Queries section
-           - Animation section
-
-****************************************
-*/
-/*
-****************************************
-                 Global
+        Global section
 ****************************************
 */
 body {
-  background-color: black;
-  font-family: "Roboto Mono";
-  display: flex;
-  flex-direction: column;
-  margin: 0;
+	background-color: #1a1c1d;
+	color: whitesmoke;
+	font-family: "Roboto Mono";
+	display: flex;
+	flex-direction: column;
+	margin: 0;
 }
+
 
 /*
 ****************************************
-           Typography section
+        Font section
+****************************************
+*/
+@font-face {
+	font-family: Harshita;
+	src: url("/fonts/Harshita-5128G.otf");
+}
+
+
+/*
+****************************************
+        Typography section
 ****************************************
 */
 h1 {
-  margin-top: 0.5em;
-  margin-bottom: 0.25em;
-  font-size: 4rem;
-  color: white;
-  text-align: center;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	font-size: 10rem;
+	font-weight: lighter;
+	color: white;
+	text-align: center;
+	font-family: Harshita;
 }
 
 h4 {
-  font-size: 1.5rem;
-  color: white;
-  text-align: center;
-  margin-bottom: 1em;
+	font-size: 3.5rem;
+	color: white;
+	text-align: center;
+	margin-top: 2em;
+	margin-bottom: 1em;
+	font-family: Roboto Mono;
+	font-weight: 100;
+}
+
+h5 {
+	font-size: 1.8rem;
+	color: white;
+	text-align: center;
 }
 
 h6 {
-  font-size: 1rem;
-  color: white;
-  text-align: center;
+	font-size: 1rem;
+	color: white;
+	text-align: center;
 }
 
 a {
-  font-size: 2rem;
-  font-weight: 300;
-  color: white;
+	font-size: 1rem;
+	font-weight: 300;
+	color: white;
 }
 
 a:hover {
-  background: -webkit-linear-gradient(60deg, #0b8dc9, #28ebcd);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #00f7ff;
+	background: -webkit-linear-gradient(45deg, #0079a7, #00bca1);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
+
 p {
-  font-size: 1.25rem;
-  color: white;
-  text-align: center;
+	font-size: 1.25rem;
+	color: white;
+	text-align: center;
 }
 
 hr {
-  width: 40em;
-  margin: auto;
-  margin-top: 2em;
-  margin-bottom: 2em;
+	width: 40em;
+	margin: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
 }
+
 
 /*
 ****************************************
-              Class section
+        Project section
 ****************************************
 */
-.homeLinks {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin: 2.5em 0;
-}
-.homeLinks a {
-  padding: 0.5em;
-  font-size: 3rem;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-}
-
-.homeButton {
-  margin: 1em;
-  text-decoration: none;
-}
-
-.contactHref {
-  font-size: 1.25rem;
-}
-
-/* -------------------- */
-/* Footer sub-section */
-.footer {
-  display: flex;
-  justify-content: center;
-  margin-top: 10em;
-  flex: 1;
-  padding: 0.5em;
-  align-items: flex-end h6;
-  align-items-font-size: 0.9rem;
-  align-items-margin-bottom: 0em;
-}
-
-/* -------------------- */
-/* Contacts sub-section */
-.contacts {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 30%;
-}
-.contacts a {
-  width: 48px;
-  height: 48px;
-  margin-top: 0.7em;
-}
-.contacts .base_img {
-  position: relative;
-  display: inline-block;
-}
-.contacts .base_img #gradient_img {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 99;
-  margin-top: 0em;
-}
-.contacts .base_img:hover #gradient_img {
-  display: inline;
-}
-
-/* -------------------- */
-.aboutme {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 1em;
-}
-
-.data {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-}
-
-/*
-****************************************
-               Id section  
-****************************************
-*/
-#mainText {
-  font-size: 8rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  font-weight: 600;
-}
-
-#goBackFlexbox {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 0%;
-}
 
 #project {
-  display: flex;
-  justify-content: space-around;
-  margin: 1em;
+	display: flex;
+	justify-content: space-around;
+	margin: 1em;
+	margin-bottom: 1.5em;
 }
 
-/* -------------------- */
-#figs {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin-top: 1em;
-}
-
-/* -------------------- */
-/*
-****************************************
-              Table section 
-****************************************
-*/
 table {
-  width: 50%;
-  font-size: 1.25rem;
-  color: white;
-  border-collapse: separate;
+	width: 50%;
+	font-size: 1.2rem;
+	color: white;
+	border-collapse: separate;
+	display: flex;
+	justify-content: space-around;
 }
-table th, table td {
-  text-align: left;
-  padding: 3%;
+
+table th {
+	border-bottom: 0.1rem dashed;
 }
+
+table th,
+table td {
+	text-align: left;
+	padding: 1em;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
 table a {
-  font-size: 1.25rem;
-  font-weight: bold;
-  text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-decoration: none;
 }
+
 
 /*
 ****************************************
-         Media Queries section
+        About Me section
 ****************************************
 */
-@media screen and (max-width: 800px) {
-  /* Text sub-section */
-  h1 {
-    font-size: 2.5rem;
-    margin-top: 1.25em;
-  }
 
-  h4 {
-    font-size: 1.25rem;
-  }
-
-  h6 {
-    font-size: 1rem;
-  }
-
-  a {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
-  hr {
-    width: 15em;
-    margin: auto;
-    margin-top: -8em;
-    margin-bottom: 10em;
-  }
-
-  /* -------------------- */
-  img {
-    width: 0.5rem;
-  }
-
-  /* Class sub-section */
-  .mainLink {
-    font-size: 2rem;
-  }
-
-  .animation {
-    font-size: 1rem;
-  }
-
-  .contactHref img {
-    width: 2rem;
-  }
-
-  .aboutme {
-    margin: 1em;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-  }
-
-  .data {
-    display: flex;
-    width: 100%;
-    margin-top: -12em;
-  }
-
-  /* -------------------- */
-  .contacts {
-    display: flex;
-    width: 100%;
-    margin-top: -9em;
-    margin-bottom: -7em;
-  }
-  .contacts a {
-    font-size: 1rem;
-  }
-  .contacts .base_img {
-    margin-bottom: 1em;
-  }
-
-  /* Id sub-section */
-  #mainText {
-    font-size: 4rem;
-  }
-
-  #authors {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-  }
-
-  #footer {
-    margin-top: -1em;
-  }
-
-  #project {
-    margin: 0em;
-    margin-top: 2em;
-  }
-
-  /* -------------------- */
-  #figs {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  /* Table sub-section */
-  table {
-    font-size: 1rem;
-  }
-  table th {
-    font-size: 0.8rem;
-  }
-  table td {
-    font-size: 0.75rem;
-    padding: 2%;
-    margin: 2%;
-  }
-
-  td {
-    border-top: 1px dashed white;
-  }
+#about_me {
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+	margin-left: 35em;
+	margin-right: 35em;
 }
+
+
+#data {
+	display: flex;
+	flex-direction: column;
+}
+
+
 /*
 ****************************************
-            Animation section 
+        Resume section
 ****************************************
 */
-.animation {
-  color: white;
-  font-size: 2rem;
-  margin: 0 auto;
-  position: relative;
+
+#resume {
+	display: flex;
+	flex-direction: row;
+	margin: 0 40em;
+	margin-bottom: 2em;
+	justify-content: space-around;
+	align-items: center;
 }
 
-.animation:after {
-  animation: glitchAnimation 2s infinite linear;
-  background: black;
-  color: white;
-  content: attr(data-text);
-  left: 3px;
-  overflow: hidden;
-  position: absolute;
-  text-shadow: 2px 0 #00fff2;
+#resume a {
+	width: 48px;
+	height: 48px;
+	margin-top: 0.7em;
 }
 
-@keyframes glitchAnimation {
-  0% {
-    left: 3px;
-    clip: rect(10px, 9999px, 110px, 0);
-  }
-  1% {
-    left: 3px;
-    clip: rect(30px, 9999px, 90px, 0);
-  }
-  10% {
-    left: 3px;
-    clip: rect(30px, 9999px, 90px, 0);
-  }
-  11% {
-    left: 3px;
-    clip: rect(50px, 9999px, 50px, 0);
-  }
-  20% {
-    left: 3px;
-    clip: rect(50px, 9999px, 50px, 0);
-  }
-  21% {
-    left: -3px;
-    clip: rect(70px, 9999px, 80px, 0);
-  }
-  30% {
-    left: -3px;
-    clip: rect(70px, 9999px, 80px, 0);
-  }
-  31% {
-    left: 3px;
-    clip: rect(80px, 9999px, 100px, 0);
-  }
-  40% {
-    left: 3px;
-    clip: rect(80px, 9999px, 100px, 0);
-  }
-  41% {
-    left: 3px;
-    clip: rect(110px, 9999px, 110px, 0);
-  }
-  50% {
-    left: 3px;
-    clip: rect(110px, 9999px, 110px, 0);
-  }
-  51% {
-    left: -3px;
-    clip: rect(90px, 9999px, 100px, 0);
-  }
-  60% {
-    left: -3px;
-    clip: rect(90px, 9999px, 100px, 0);
-  }
-  61% {
-    left: 3px;
-    clip: rect(50px, 9999px, 90px, 0);
-  }
-  70% {
-    left: 3px;
-    clip: rect(50px, 9999px, 90px, 0);
-  }
-  71% {
-    left: 3px;
-    clip: rect(30px, 9999px, 30px, 0);
-  }
-  80% {
-    left: 3px;
-    clip: rect(30px, 9999px, 30px, 0);
-  }
-  81% {
-    left: 3px;
-    clip: rect(20px, 9999px, 70px, 0);
-  }
-  90% {
-    left: 3px;
-    clip: rect(20px, 9999px, 70px, 0);
-  }
-  91% {
-    left: 3px;
-    clip: rect(10px, 9999px, 110px, 0);
-  }
-  100% {
-    left: 3px;
-    clip: rect(10px, 9999px, 110px, 0);
-  }
+#resume .base_img {
+	position: relative;
+	display: inline-block;
 }
 
-/*# sourceMappingURL=main.css.map */
+#resume .base_img #gradient_img {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	margin-top: 0em;
+}
+
+#resume .base_img:hover #gradient_img {
+	display: inline;
+}
+
+
+/*
+****************************************
+        Footer section
+****************************************
+*/
+
+#footer {
+	margin-top: 4em;
+}
