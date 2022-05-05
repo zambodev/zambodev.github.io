@@ -9,7 +9,6 @@ body {
 	font-family: "Roboto Mono";
 	display: flex;
 	flex-direction: column;
-	margin: 0;
 }
 
 
@@ -29,42 +28,50 @@ body {
         Typography section
 ****************************************
 */
-h1 {
-	margin-top: 1em;
-	margin-bottom: 0.5em;
+h1 {	
 	font-size: 10rem;
-	font-weight: lighter;
+	font-family: Roboto Mono;
+	font-weight: 100;
 	color: white;
-	text-align: center;
 	font-family: Harshita;
+	margin: 0em;
 }
 
 h4 {
 	font-size: 3.5rem;
 	color: white;
-	text-align: center;
-	margin-top: 2em;
-	margin-bottom: 1em;
 	font-family: Roboto Mono;
-	font-weight: 100;
+	font-weight: 200;
+	margin: 0em;
 }
 
 h5 {
 	font-size: 1.8rem;
 	color: white;
 	text-align: center;
+	font-family: Roboto Mono;
+	font-weight: 200;
+	margin: 0em;
 }
 
 h6 {
 	font-size: 1rem;
 	color: white;
 	text-align: center;
+	margin: 0em;
+	font-family: Roboto Mono;
+	font-weight: 100;
+}
+
+p {
+	font-family: Roboto Mono;
+	font-weight: 100;
 }
 
 a {
 	font-size: 1rem;
-	font-weight: 300;
 	color: white;
+	margin: 0em;
 }
 
 a:hover {
@@ -86,6 +93,41 @@ hr {
 	margin: auto;
 	margin-top: 2em;
 	margin-bottom: 2em;
+}
+
+
+/*
+****************************************
+        Class section
+****************************************
+*/
+.subtitle {
+	display: flex;
+	justify-content: center;
+	margin-top: 7em;
+	margin-bottom: 3.5em;
+}
+
+
+/*
+****************************************
+        Title section
+****************************************
+*/
+#title {
+	display: flex;
+	justify-content: center;
+
+	height: fit-content;
+	margin-bottom: 5em;
+	margin-top: 4.5em;
+}
+
+#title h1 {
+	height: fit-content;
+	text-align: center;
+	width: fit-content;
+	padding-top: 0.5em;
 }
 
 
@@ -141,14 +183,26 @@ table a {
 	justify-content: space-evenly;
 	margin-top: 0.5em;
 	margin-bottom: 1em;
-	margin-left: 35em;
-	margin-right: 35em;
+	margin-left: 15em;
+	margin-right: 15em;
 }
 
 
 #data {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+
+	width: 60em;
+}
+
+#data h5 {
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+
+#data p {
+	margin-bottom: 2em;
 }
 
 
@@ -161,16 +215,14 @@ table a {
 #resume {
 	display: flex;
 	flex-direction: row;
-	margin: 0 40em;
+	margin: 0 15em;
 	margin-bottom: 2em;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	align-items: center;
 }
 
 #resume a {
-	width: 48px;
-	height: 48px;
-	margin-top: 0.7em;
+	margin-top: 1em;
 }
 
 #resume .base_img {
@@ -200,4 +252,5 @@ table a {
 
 #footer {
 	margin-top: 4em;
+	margin-bottom: 1em;
 }
