@@ -71,9 +71,10 @@ function update() {
                     }
 
                     /* Last commit */
-                    cell[index1] = row.insertCell();
-                    cell[index1].innerHTML = parseDate(new Date(obj[index1 - 1].updated_at));
-
+                    if(!isMobile()) {
+                        cell[index1] = row.insertCell();
+                        cell[index1].innerHTML = parseDate(new Date(obj[index1 - 1].updated_at));
+                    }
                 }
             });
 

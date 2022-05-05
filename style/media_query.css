@@ -1,0 +1,62 @@
+@media only screen and (max-width: 800px) {
+
+	body {
+		width: 100%;
+		margin: 0em;
+	}
+
+	h1 {
+		font-size: 5rem;
+	}
+
+	h4 {
+		font-size: 2.5rem;
+	}
+
+	h5 {
+		font-size: 1.5rem;
+	}
+
+	p {
+		font-size: 1rem;
+	}
+
+	#project {
+		size: 50%;
+	}
+
+	table {
+		font-size: 1rem;
+	}
+
+	table th,
+	table td {
+		text-align: left;
+		padding: 1em;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+
+	table a {
+		font-size: 1rem;
+	}
+
+	#commit {
+		display: none;
+	}
+
+	#about_me {
+		margin-left: 2em;
+		margin-right: 2em;
+	}
+
+	#resume {
+		margin-left: 2em;
+		margin-right: 2em;
+	}
+
+	.subtitle {
+		margin-top: 5em;
+	}
+
+}
