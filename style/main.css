@@ -75,7 +75,7 @@ a {
 }
 
 a:hover {
-	background: -webkit-linear-gradient(45deg, #0079a7, #00bca1);
+	background: -webkit-linear-gradient(0deg, #0079a6, #00bca1);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -239,6 +239,17 @@ table a {
 #resume .base_img:hover #gradient_img {
 	display: inline;
 }
+
+#resume img:hover {
+	animation: image_translation 1.2s infinite linear;
+}
+
+@keyframes image_translation {
+	0%   {transform: translate(0, 0rem);}
+	50% {transform: translate(0, -0.5em);}
+	100% {transform: translate(0, 0em);}
+}
+
 
 
 /*
