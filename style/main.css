@@ -74,13 +74,6 @@ a {
 	margin: 0em;
 }
 
-a:hover {
-	background: -webkit-linear-gradient(0deg, #0079a6, #00bca1);
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
 
 p {
 	font-size: 1.25rem;
@@ -165,9 +158,26 @@ table td {
 }
 
 table a {
-	font-size: 1.2rem;
-	font-weight: bold;
-	text-decoration: none;
+	position: relative;
+	display: inline-block;
+	font-size: 1em;
+	color: white;
+	margin: 0em;
+	overflow: hidden;
+
+	background: linear-gradient(to right, #0079a6, #00bca1 60%);
+
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% 100%;
+	background-position: 100%;
+
+	transition: background-position 275ms ease;
+}
+
+table a:hover {
+	background-position: 0 100%;
 }
 
 
