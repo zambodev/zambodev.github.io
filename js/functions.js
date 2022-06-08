@@ -1,106 +1,91 @@
+/* Github link for user's repo information */
 const link = `https://api.github.com/users/Zambo-dev/repos`;
 
 /* Retrive data object from github */
-async function getData()
-{
-	let response = await fetch(link);
-	let obj = await response.json();
+async function getData() {
+    let response = await fetch(link);
+    let obj = await response.json();
 
-	return obj;
+    return obj;
 }
 
 /* Parse date into a string */
-function parseDate(date)
-{
-	const month = date.getMonth() + 1;
-	const data_str =
-		date.getUTCDate() +
-		"/" +
-		month +
-		"/" +
-		date.getFullYear().toString().slice(2);
-	return data_str;
+function parseDate(date) {
+    const month = date.getMonth() + 1;
+    const dateStr =
+        date.getUTCDate() +
+        "/" +
+        month +
+        "/" +
+        date.getFullYear().toString().slice(2);
+    return dateStr;
 }
 
 /* Detect if the screen is landscape or mobile format */
-function isMobile()
-{
-	if (window.innerWidth <= 800) return true;
-	else return false;
+function isMobile() {
+    return (window.innerWidth <= 800);
 }
 
 /* Sort object components */
-function sort(obj)
-{
-	for (var i = 0; i < obj.length; i++)
-	{
-		for (var j = 1; j < obj.length; j++)
-		{
-			var t1 = new Date(obj[j].pushed_at);
-			var t2 = new Date(obj[j - 1].pushed_at);
-			if (t1 > t2)
-			{
-				var tmp = obj[j];
-				obj[j] = obj[j - 1];
-				obj[j - 1] = tmp;
-			}
-		}
-	}
+function sort(obj) {
+    for (var i = 0; i < obj.length; i++) {
+        for (var j = 1; j < obj.length; j++) {
+            var t1 = new Date(obj[j].pushed_at);
+            var t2 = new Date(obj[j - 1].pushed_at);
+            if (t1 > t2) {
+                var tmp = obj[j];
+                obj[j] = obj[j - 1];
+                obj[j - 1] = tmp;
+            }
+        }
+    }
 
-	return obj;
+    return obj;
 }
 
 /* Update on screen data */
-function update()
-{
-	const mainTable = document.getElementById("project_table");
+function update() {
+    const mainTable = document.getElementById("project_table");
 
-	if (mainTable !== null)
-	{
-		getData().then((obj) =>
-		{
-			var obj = sort(obj);
+    if (mainTable !== null) {
+        getData().then((obj) => {
+            var obj = sort(obj);
 
-			while (mainTable.rows[1])
-			{
-				mainTable.rows[1].remove();
-			}
-			for (var index1 = 1; index1 < obj.length + 1; index1++)
-			{
-				let row = mainTable.insertRow(index1);
-				let cell = new Array(6);
+            while (mainTable.rows[1]) {
+                mainTable.rows[1].remove();
+            }
+            for (var index1 = 1; index1 < obj.length + 1; index1++) {
+                let row = mainTable.insertRow(index1);
+                let cell = new Array(6);
 
-				/* Project name */
-				var link = document.createElement("a");
-				link.setAttribute("href", obj[index1 - 1].html_url);
-				link.setAttribute("rel", "noopener noreferrer");
-				var linkText = document.createTextNode(obj[index1 - 1].name);
-				link.appendChild(linkText);
+                /* Project name */
+                var link = document.createElement("a");
+                link.setAttribute("href", obj[index1 - 1].html_url);
+                link.setAttribute("rel", "noopener noreferrer");
+                var linkText = document.createTextNode(obj[index1 - 1].name);
+                link.appendChild(linkText);
 
-				cell[index1] = row.insertCell();
-				cell[index1].appendChild(link);
+                cell[index1] = row.insertCell();
+                cell[index1].appendChild(link);
 
-				/* Language */
-				cell[index1] = row.insertCell();
-				if (obj[index1 - 1].language == null)
-				{
-					cell[index1].innerHTML = "No language";
-				} else
-				{
-					cell[index1].innerHTML = obj[index1 - 1].language;
-				}
-				console.log(obj);
-				/* Last commit */
-				if (!isMobile())
-				{
-					cell[index1] = row.insertCell();
-					cell[index1].innerHTML = parseDate(
-						new Date(obj[index1 - 1].pushed_at)
-					);
-				}
-			}
-		});
-	}
+                /* Language */
+                cell[index1] = row.insertCell();
+                if (obj[index1 - 1].language == null) {
+                    cell[index1].innerHTML = "No language";
+                } else {
+                    cell[index1].innerHTML = obj[index1 - 1].language;
+                }
+
+                /* Last commit */
+                if (!isMobile()) {
+                    cell[index1] = row.insertCell();
+                    cell[index1].innerHTML = parseDate(
+                        new Date(obj[index1 - 1].pushed_at)
+                    );
+                }
+            }
+        });
+    }
 }
 
 /* Run update data */
