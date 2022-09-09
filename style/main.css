@@ -165,7 +165,7 @@ table a {
 	margin: 0em;
 	overflow: hidden;
 
-	background: linear-gradient(to right, #0079a6, #00bca1 60%);
+	background: linear-gradient(to right, #9400d3, 50%, white 50%);
 
 	background-clip: text;
 	-webkit-background-clip: text;
