@@ -7,5 +7,5 @@ A self coded website that contains all of my project and all you need to know ab
 ## Languages used
 - HTML
 - JS
-- SASS
+- CSS
 
