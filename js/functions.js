@@ -1,5 +1,13 @@
 /* Github link for user's repo information */
 const link = `https://api.github.com/users/Zambo-dev/repos`;
+const text = "Zambo"
+const term_bar = '_'
+const title_html = document.getElementById("title_txt");
+const speed = 500
+var blink_time = 6
+var idx = 0;
+var b_idx = 0;
+var set = true
 
 /* Retrive data object from github */
 async function getData() {
@@ -88,5 +96,37 @@ function update() {
     }
 }
 
+function add_text() {
+
+	title_html.textContent = title_html.textContent.replace(term_bar, text.charAt(idx))
+	title_html.textContent += term_bar
+	++idx
+
+	if(idx < text.length)
+		setTimeout(add_text, 180)
+	else {
+		blink_time = 0
+		setTimeout(blink, 180)
+	}
+}
+
+function blink() {
+	if(set) {
+		title_html.textContent = title_html.textContent.replace(term_bar, ' ')
+		set = false
+	}
+	else {
+		title_html.textContent = title_html.textContent.replace(' ', term_bar)
+		set = true
+	}
+	++b_idx
+
+	if(b_idx < blink_time || blink_time == 0)
+		setTimeout(blink, 400)
+	else
+		setTimeout(add_text, 400)
+}
+
+blink()
 /* Run update data */
 update();
