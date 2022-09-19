@@ -13,6 +13,16 @@ body {
 
 /*
 ****************************************
+        Font section
+****************************************
+*/
+@font-face {
+	font-family: Play_font;
+	src: url("/fonts/Play-Regular.ttf");
+}
+
+/*
+****************************************
         Typography section
 ****************************************
 */
@@ -105,6 +115,7 @@ hr {
 }
 
 #title_txt {
+	font-family: Play_font;
 	font-size: 10rem;
 	width: 3.6em;
 	height: 1.2em;
