@@ -17,8 +17,8 @@ body {
 ****************************************
 */
 @font-face {
-	font-family: Play_font;
-	src: url("/fonts/Play-Regular.ttf");
+	font-family: Quicksand;
+	src: url("/fonts/Quicksand-VariableFont_wght.ttf");
 }
 
 /*
@@ -115,7 +115,8 @@ hr {
 }
 
 #title_txt {
-	font-family: Play_font;
+	font-family: Quicksand;
+	font-weight: 200;
 	font-size: 10rem;
 	width: 3.7em;
 	height: 1.2em;
