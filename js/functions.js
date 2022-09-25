@@ -5,6 +5,7 @@ const term_bar = '_'
 const title_html = document.getElementById("title_txt");
 const speed = 500
 var blink_time = 6
+var write = 1
 var idx = 0;
 var b_idx = 0;
 var set = true
@@ -100,12 +101,12 @@ function add_text() {
 
 	title_html.textContent = title_html.textContent.replace(term_bar, text.charAt(idx))
 	title_html.textContent += term_bar
+    set = true
 	++idx
 
 	if(idx < text.length)
 		setTimeout(add_text, 180)
 	else {
-		blink_time = 0
 		setTimeout(blink, 180)
 	}
 }
@@ -121,10 +122,13 @@ function blink() {
 	}
 	++b_idx
 
-	if(b_idx < blink_time || blink_time == 0)
+	if(b_idx < blink_time)
 		setTimeout(blink, 400)
-	else
+	else if(write > 0)
+    {
 		setTimeout(add_text, 400)
+        --write
+    }
 }
 
 blink()

@@ -9,6 +9,9 @@ body {
 	font-family: "Roboto Mono";
 	display: flex;
 	flex-direction: column;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
 /*
@@ -118,7 +121,7 @@ hr {
 	font-family: Quicksand;
 	font-weight: 200;
 	font-size: 10rem;
-	width: 3.7em;
+	width: 3.4em;
 	height: 1.2em;
 }
 
