@@ -70,6 +70,7 @@ p {
 
 a {
 	font-size: 1rem;
+	font-weight: bold;
 	color: white;
 	margin: 0em;
 }
@@ -148,7 +149,12 @@ table {
 }
 
 table th {
+	font-size: 1em;
 	border-bottom: 0.1rem dashed;
+}
+
+table td {
+	font-weight: 200;
 }
 
 table th,
@@ -167,7 +173,7 @@ table a {
 	margin: 0em;
 	overflow: hidden;
 
-	background: linear-gradient(to right, #9400d3, 50%, white 50%);
+	background: linear-gradient(to right, #07eeee, 50%, white 50%);
 
 	background-clip: text;
 	-webkit-background-clip: text;
