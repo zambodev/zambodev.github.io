@@ -1,5 +1,5 @@
 /* Github link for user's repo information */
-const link = `https://api.github.com/users/Zambo-dev/repos`;
+const link = `https://api.github.com/users/zambodev/repos`;
 const text = "Zambo"
 const term_bar = '_'
 const title_html = document.getElementById("title_txt");
