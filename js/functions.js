@@ -1,8 +1,10 @@
 /* Github link for user's repo information */
-const link = `https://api.github.com/users/zambodev/repos`;
+const username = "zambodev"
+const link = "https://api.github.com/users/" + username + "/repos"
 const text = "Zambo"
 const term_bar = '_'
 const title_html = document.getElementById("title_txt");
+const footer_html = document.getElementById("copyright");
 const speed = 500
 var blink_time = 6
 var write = 1
@@ -131,6 +133,14 @@ function blink() {
     }
 }
 
+function update_footer() {
+    var year = new Date()
+    footer_html.textContent += username + " - " + year.getFullYear();
+}
+
+/* Run title animation */
 blink()
 /* Run update data */
-update();
+update()
+/* Add footer data */
+update_footer()
