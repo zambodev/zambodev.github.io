@@ -138,9 +138,9 @@ function update_footer() {
     footer_html.textContent += username + " - " + year.getFullYear();
 }
 
-/* Run title animation */
-blink()
 /* Run update data */
 update()
+/* Run title animation */
+blink()
 /* Add footer data */
 update_footer()
