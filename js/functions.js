@@ -23,13 +23,23 @@ async function getData() {
 
 /* Parse date into a string */
 function parseDate(date) {
-    const month = date.getMonth() + 1
+    var month = date.getMonth() + 1
+    if(month < 10) {
+        month = "0" + month
+    }
+
+    var day = date.getUTCDate()
+    if(day < 10) {
+        day = "0" + day
+    }
+
     const dateStr =
-        date.getUTCDate() +
+        day +
         "/" +
         month +
         "/" +
         date.getFullYear().toString().slice(2)
+        
     return dateStr
 }
 
@@ -66,7 +76,7 @@ function update() {
             while (mainTable.rows[1]) {
                 mainTable.rows[1].remove()
             }
-            for (var index1 = 1; index1 < obj.length + 1; index1++) {
+            for (var index1 = 1; index1 < 9; index1++) {
                 let row = mainTable.insertRow(index1)
                 let cell = new Array(6)
 

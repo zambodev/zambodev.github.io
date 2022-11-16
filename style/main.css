@@ -134,13 +134,31 @@ hr {
 */
 #project {
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
+	flex-direction: column;
 	margin: 1em;
 	margin-bottom: 1.5em;
 }
 
+#project_link {
+	display: flex;
+	justify-content: center;
+}
+
+#project_link a {
+	font-size: 1em;
+	font-weight: 100;
+	margin-top: 1em;
+	overflow: hidden;
+	text-decoration: none;
+}
+
+#project_link a:hover {
+	font-weight: 300;
+}
+
 table {
-	width: 50%;
+	width: 100%;
 	font-size: 1.2rem;
 	color: white;
 	border-collapse: separate;
