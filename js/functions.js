@@ -2,54 +2,22 @@
 const username = "zambodev"
 const link = "https://api.github.com/users/" + username + "/repos"
 const text = "Zambo"
-const term_bar = '_'
-const title_html = document.getElementById("title_txt")
-const footer_html = document.getElementById("copyright")
-const age_html = document.getElementById("whoami")
-const speed = 500
-var blink_time = 6
-var write = 1
-var idx = 0
-var b_idx = 0
-var set = true
+const title_html = document.getElementById("main_text")
+
 
 /* Retrive data object from github */
-async function getData() {
-    let response = await fetch(link)
-    let obj = await response.json()
-
-    return obj
-}
-
-/* Parse date into a string */
-function parseDate(date) {
-    var month = date.getMonth() + 1
-    if(month < 10) {
-        month = "0" + month
+async function getRepos() {
+    try {
+        let res = await (await fetch(link)).json();
+        res = sortByDate(res);
+        return res;
+    } catch (error) {
+        console.error(error);
     }
-
-    var day = date.getUTCDate()
-    if(day < 10) {
-        day = "0" + day
-    }
-
-    const dateStr =
-        day +
-        "/" +
-        month +
-        "/" +
-        date.getFullYear().toString().slice(2)
-        
-    return dateStr
-}
-
-/* Detect if the screen is landscape or mobile format */
-function isMobile() {
-    return (window.innerWidth <= 800)
 }
 
 /* Sort object components */
-function sort(obj) {
+function sortByDate(obj) {
     for (var i = 0; i < obj.length; i++) {
         for (var j = 1; j < obj.length; j++) {
             var t1 = new Date(obj[j].pushed_at)
@@ -66,94 +34,53 @@ function sort(obj) {
 }
 
 /* Update on screen data */
-function update() {
-    const mainTable = document.getElementById("project_table")
+function getTable() {
+    const table = document.getElementById("projTable")
+    
+    /* Crete table heasder */
+    let row = table.insertRow(0);
+    row.insertCell().outerHTML = "<th>Repository</th>";
+    row.insertCell().outerHTML = "<th>Language</th>";
 
-    if (mainTable !== null) {
-        getData().then((obj) => {
-            var obj = sort(obj)
-
-            while (mainTable.rows[1]) {
-                mainTable.rows[1].remove()
+    /* Fill table body */
+    getRepos()
+    .then(obj => {
+        for (var idx = 1; idx < 9; idx++) {
+            /* Insert new row */
+            let row = table.insertRow(idx)
+            /* Create repo name link */
+            var link = document.createElement("a")
+            link.setAttribute("href", obj[idx - 1].html_url)
+            link.setAttribute("rel", "noopener noreferrer")
+            link.appendChild(document.createTextNode(obj[idx - 1].name))
+            /* Insert link */
+            let cell = row.insertCell()
+            cell.appendChild(link)
+            /* Insert language */
+            cell = row.insertCell()
+            if (obj[idx - 1].language == null) {
+                cell.innerHTML = "No language"
+            } else {
+                cell.innerHTML = obj[idx - 1].language
             }
-            for (var index1 = 1; index1 < 9; index1++) {
-                let row = mainTable.insertRow(index1)
-                let cell = new Array(6)
-
-                /* Project name */
-                var link = document.createElement("a")
-                link.setAttribute("href", obj[index1 - 1].html_url)
-                link.setAttribute("rel", "noopener noreferrer")
-                var linkText = document.createTextNode(obj[index1 - 1].name)
-                link.appendChild(linkText)
-
-                cell[index1] = row.insertCell()
-                cell[index1].appendChild(link)
-
-                /* Language */
-                cell[index1] = row.insertCell()
-                if (obj[index1 - 1].language == null) {
-                    cell[index1].innerHTML = "No language"
-                } else {
-                    cell[index1].innerHTML = obj[index1 - 1].language
-                }
-
-                /* Last commit */
-                if (!isMobile()) {
-                    cell[index1] = row.insertCell()
-                    cell[index1].innerHTML = parseDate(
-                        new Date(obj[index1 - 1].pushed_at)
-                    )
-                }
-            }
-        })
-    }
+        }
+    });
 }
 
-function add_text() {
+function updateData() {
+    let footerCopyright = document.getElementById("copyright");
+    var date = new Date();
+    var year = date.getFullYear();
+    var month = date.getMonth()+1;
+    footerCopyright.textContent += username + " - " + year;
 
-	title_html.textContent = title_html.textContent.replace(term_bar, text.charAt(idx))
-	title_html.textContent += term_bar
-    set = true
-	++idx
+    const whoamiAge = document.getElementById("whoami");
+    whoamiAge.textContent = "Hi! I'm Thomas and I'm a " + ((month-9 >= 0) ? year-2001 : year-1-2001) + " yo developer from Italy";
 
-	if(idx < text.length)
-		setTimeout(add_text, 180)
-	else {
-		setTimeout(blink, 180)
-	}
+    let tableLink = document.getElementById("projLink");
+    tableLink.setAttribute("href", link);
 }
 
-function blink() {
-	if(set) {
-		title_html.textContent = title_html.textContent.replace(term_bar, ' ')
-		set = false
-	}
-	else {
-		title_html.textContent = title_html.textContent.replace(' ', term_bar)
-		set = true
-	}
-	++b_idx
 
-	if(b_idx < blink_time)
-		setTimeout(blink, 400)
-	else if(write > 0)
-    {
-		setTimeout(add_text, 400)
-        --write
-    }
-}
-
-function update_data() {
-    var date = new Date()
-    var year = date.getFullYear()
-    footer_html.textContent += username + " - " + year
-    age_html.textContent = "Hi! I'm Thomas and I'm a " + (year-2001) + " yo developer from Italy"
-}
-
-/* Run update data */
-update()
-/* Run title animation */
-blink()
-/* Add footer data */
-update_data()
+getTable();
+updateData();

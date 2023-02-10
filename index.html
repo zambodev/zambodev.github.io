@@ -4,46 +4,33 @@
 
 	<title> Zambo's website </title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;600&display=swap"
+		rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="style/main.css">
-	<link rel="stylesheet" href="style/media_query.css">
+	<link rel="stylesheet" type="text/css" href="style/main.css">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
 	<link rel="icon" href="https://avatars.githubusercontent.com/u/46820947?v=4">
 </head>
 
-<body>	
+<body>
 	<!--
 	********************************
         	Main title 
 	********************************
 	-->
-	<div id="title">
-		<h1 id="title_txt">_</h1>
-	</div>
+	<div id="main_text"></div>
 
 	<!--
 	********************************
         	Project section 
 	********************************
 	-->
-	<div class="subtitle">
-		<h4>Latest Commits</h4>
-	</div>
+	<div class="title"> Latest Projects </div>
 
-	<div id="project">
-
-		<table id="project_table">
-			<tr>
-				<th>Repository</th>
-				<th id="language">Language</th>
-				<th id="commit">Date</th>
-			</tr>
-		</table>
-		<div id="project_link">
-		<a href="https://github.com/zambodev?tab=repositories">See more on GitHub</a>
-		</div>
+	<div class="data">
+		<table id="projTable"></table>
+		<a id="projLink">See more on GitHub</a>
 	</div>
 
 
@@ -52,49 +39,42 @@
         	About me 
 	********************************
 	-->
-	<div class="subtitle">
-		<h4>About Me</h4>
+	<div class="title"> About Me </div>
+
+	<div class="data">
+		<div class="subtitle"> Who am I? </div>
+		<p id="whoami"></p>
+
+		<div class="subtitle"> How it all started </div>
+		<p>
+			It all started playing video games, in fact, as a child I spent my days
+			on my family's computer.
+			At 12 I received my first pc as a gift for my birthday and from that moment I started to explore
+			the digital world.
+			However the turning point was when I started programming in high school:
+			there, among the school desks, I understood what I would have done in my future.
+		</p>
+
+		<div class="subtitle"> Under the hood </div>
+		<p>
+			As I said, I'm a developer, and as such I have my strengths.
+			In particular, I'm specialized in writing low-level programs and optimized algorithms.
+		</p>
 	</div>
 
-	<div id="about_me">
 
-		<div id="data">
-			<h5>Who am I?</h5>
-			<p id="whoami" ></p>
-
-			<h5>How it all started</h5>
-			<p>	
-				It all started playing video games, in fact, as a child I spent my days
-				on my family's computer.
-				At 12 I received my first pc as a gift for my birthday and from that moment I started to explore
-				the digital world.
-				However the turning point was when I started programming in high school:
-				there, among the school desks, I understood what I would have done in my future.
-			</p>
-
-			<h5>Under the hood</h5>
-			<p>
-				As I said, I'm a developer, and as such I have my strengths.
- 				In particular, I'm specialized in writing low-level programs and optimized algorithms.
-			</p>
-		</div>
-	</div>
-
-	
 	<!--
 	********************************
         	Resume me 
 	********************************
 	-->
-	<div class="subtitle">
-		<h4>Links</h4>
-	</div>
+	<div class="title"> Links </div>
 
-	<div id="resume">
+	<div class="data">
 
 		<div class="base_img">
-			<a class="contactHref" href="https://github.com/zambodev"> <img src="images/github.png"
-					alt="GitHub" title="GitHub" rel="noopener noreferrer"> </a>
+			<a class="contactHref" href="https://github.com/zambodev"> <img src="images/github.png" alt="GitHub"
+					title="GitHub" rel="noopener noreferrer"> </a>
 		</div>
 
 		<div class="base_img">
@@ -110,8 +90,8 @@
         	Copyright me 
 	********************************
 	-->
-	<div id="footer">
-		<h6 id="copyright"> Copyright - &copy; - </h6>
+	<div class="footer">
+		<div id="copyright"> Copyright - &copy; - </div>
 	</div>
 
 	<script src="js/functions.js"></script>
