@@ -4,8 +4,7 @@
 
 	<title> Zambo's website </title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;600&display=swap"
-		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;600&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style/main.css">
 	<meta charset="UTF-8">
@@ -14,85 +13,69 @@
 </head>
 
 <body>
-	<!--
-	********************************
-        	Main title 
-	********************************
-	-->
+	<!-- Main title -->
 	<div id="main_text"></div>
 
-	<!--
-	********************************
-        	Project section 
-	********************************
-	-->
-	<div class="title"> Latest Projects </div>
-
-	<div class="data">
+	<!-- Project -->
+	<div class="container">
+		<div class="title"> Latest Projects </div>
 		<table id="projTable"></table>
 		<a id="projLink">See more on GitHub</a>
 	</div>
 
 
-	<!--
-	********************************
-        	About me 
-	********************************
-	-->
-	<div class="title"> About Me </div>
+	<!-- About me -->
+	<div class="container">
+		<div class="title"> About Me </div>
 
-	<div class="data">
-		<div class="subtitle"> Who am I? </div>
-		<p id="whoami"></p>
-
-		<div class="subtitle"> How it all started </div>
-		<p>
-			It all started playing video games, in fact, as a child I spent my days
-			on my family's computer.
-			At 12 I received my first pc as a gift for my birthday and from that moment I started to explore
-			the digital world.
-			However the turning point was when I started programming in high school:
-			there, among the school desks, I understood what I would have done in my future.
-		</p>
-
-		<div class="subtitle"> Under the hood </div>
-		<p>
-			As I said, I'm a developer, and as such I have my strengths.
-			In particular, I'm specialized in writing low-level programs and optimized algorithms.
-		</p>
-	</div>
-
-
-	<!--
-	********************************
-        	Resume me 
-	********************************
-	-->
-	<div class="title"> Links </div>
-
-	<div class="data">
-
-		<div class="base_img">
-			<a class="contactHref" href="https://github.com/zambodev"> <img src="images/github.png" alt="GitHub"
-					title="GitHub" rel="noopener noreferrer"> </a>
+		<div class="container_col">
+			<div class="subtitle"> Who am I? </div>
+			<div id="whoami" class="text"></div>
+		</div>
+		
+		<div class="container_col">
+			<div class="subtitle"> How it all started </div>
+			<div  class="text">
+				It all started playing video games, in fact, as a child I spent my days
+				on my family's computer.
+				At 12 I received my first pc as a gift for my birthday and from that moment I started to explore
+				the digital world.
+				However the turning point was when I started programming in high school:
+				there, among the school desks, I understood what I would have done in my future.
+			</div>
 		</div>
 
-		<div class="base_img">
-			<a class="contactHref" href="https://www.linkedin.com/in/thomas-zambelli-b171b8213/">
-				<img src="images/linkedin.png" alt="Linkedin" title="Linkedin" rel="noopener noreferrer"> </a>
+		<div class="container_col">
+			<div class="subtitle"> Under the hood </div>
+			<div  class="text">
+				As I said, I'm a developer, and as such I have my strengths.
+				In particular, I'm specialized in writing low-level programs and optimized algorithms.
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Resume -->
+	<div class="container">
+		<div class="title"> Links </div>
+
+		<div class="container_row">
+			<div class="base_img">
+				<a class="contactHref" href="https://github.com/zambodev"> <img src="images/github.png" alt="GitHub"
+						title="GitHub" rel="noopener noreferrer"> </a>
+			</div>
+
+			<div class="base_img">
+				<a class="contactHref" href="https://www.linkedin.com/in/thomas-zambelli-b171b8213/">
+					<img src="images/linkedin.png" alt="Linkedin" title="Linkedin" rel="noopener noreferrer"> </a>
+			</div>
 		</div>
 
 	</div>
 
 
-	<!--
-	********************************
-        	Copyright me 
-	********************************
-	-->
-	<div class="footer">
-		<div id="copyright"> Copyright - &copy; - </div>
-	</div>
+	<!-- Copyright -->
+	<div id="copyright"> Copyright - &copy; - </div>
 
 	<script src="js/functions.js"></script>
 </body>
