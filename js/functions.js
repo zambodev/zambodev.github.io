@@ -1,14 +1,15 @@
 /* Github link for user's repo information */
-const username = "zambodev"
-const link = "https://api.github.com/users/" + username + "/repos"
-const text = "Zambo"
-const title_html = document.getElementById("main_text")
+const username = "zambodev";
+const apiLink = "https://api.github.com/users/" + username + "/repos";
+const userLink = "https://github.com/" + username;
+const text = "Zambo";
+const title_html = document.getElementById("main_text");
 
 
 /* Retrive data object from github */
 async function getRepos() {
     try {
-        let res = await (await fetch(link)).json();
+        let res = await (await fetch(apiLink)).json();
         res = sortByDate(res);
         return res;
     } catch (error) {
@@ -36,49 +37,36 @@ function sortByDate(obj) {
 /* Update on screen data */
 function getTable() {
     const table = document.getElementById("projTable")
-    
-    /* Crete table heasder */
-    let row = table.insertRow(0);
-    row.insertCell().outerHTML = "<th>Repository</th>";
-    row.insertCell().outerHTML = "<th>Language</th>";
-
     /* Fill table body */
     getRepos()
     .then(obj => {
-        for (var idx = 1; idx < 9; idx++) {
+        for (var idx = 0; idx < 9; idx++) {
             /* Insert new row */
             let row = table.insertRow(idx)
             /* Create repo name link */
             var link = document.createElement("a")
-            link.setAttribute("href", obj[idx - 1].html_url)
+            link.setAttribute("href", obj[idx].html_url)
             link.setAttribute("rel", "noopener noreferrer")
-            link.appendChild(document.createTextNode(obj[idx - 1].name))
+            link.appendChild(document.createTextNode(obj[idx].name))
             /* Insert link */
             let cell = row.insertCell()
             cell.appendChild(link)
             /* Insert language */
             cell = row.insertCell()
-            if (obj[idx - 1].language == null) {
+            if (obj[idx].language == null) {
                 cell.innerHTML = "No language"
             } else {
-                cell.innerHTML = obj[idx - 1].language
+                cell.innerHTML = obj[idx].language
             }
         }
     });
 }
 
 function updateData() {
-    let footerCopyright = document.getElementById("copyright");
     var date = new Date();
-    var year = date.getFullYear();
-    var month = date.getMonth()+1;
-    footerCopyright.textContent += username + " - " + year;
 
-    const whoamiAge = document.getElementById("whoami");
-    whoamiAge.textContent = "Hi! I'm Thomas and I'm a " + ((month-9 >= 0) ? year-2001 : year-1-2001) + " yo developer from Italy";
-
-    let tableLink = document.getElementById("projLink");
-    tableLink.setAttribute("href", link);
+    let footerCopyright = document.getElementById("copyright");
+    footerCopyright.textContent += username + " - " + date.getFullYear();
 }
 
 
