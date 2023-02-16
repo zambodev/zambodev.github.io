@@ -1,0 +1,160 @@
+/* Global */
+
+body {
+	background-color: #1e1e1e;
+	color: #d4d4d4;
+	font-family: "Roboto Mono";
+	display: flex;
+	flex-direction: column;
+	appearance: none;
+	width: auto;
+}
+
+
+/* Typography */
+
+.title {
+	font-weight: 400;
+	font-size: 1.5rem;
+	margin: 0em;
+}
+
+.subtitle {
+	font-weight: 300;
+	font-size: 1.2rem;
+	margin: 0em;
+}
+
+.text {
+	font-weight: 300;
+	font-size: 0.9rem;
+	margin: 0em;
+
+	padding: 1em;
+
+	border: 1px solid #d4d4d4;
+	border-radius: 16px;
+}
+
+a {
+	color: #cec2eb;
+	font-size: 0.9rem;
+	font-weight: 400;
+	text-decoration: none;
+}
+
+a:hover {
+	font-weight: 600;
+	color: #ffffff;
+}
+
+img {
+	width: 4rem;
+	height: 4rem;
+	filter: invert(85%) sepia(12%) saturate(1491%) hue-rotate(201deg) brightness(99%) contrast(87%);
+}
+
+img:hover {
+	filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(276deg) brightness(104%) contrast(103%);
+}
+
+
+/* Container */
+
+.container {
+	display: flex;
+	flex-direction: column;
+
+	row-gap: 1.8em;
+	
+	align-items: center;
+	text-align: center;
+
+	margin-bottom: 5em;
+	margin-inline: 8%;
+}
+
+.subcontainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+
+	width: 100%;
+
+	column-gap: 4em;
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+
+	margin: 0;
+}
+
+
+/* Id */
+
+#mainTitle {
+	font-weight: 600;
+	font-size: 3rem;
+
+	text-align: center;
+}
+
+#projectLink {
+	border: 1px solid #d4d4d4;
+	border-radius: 32px;
+	padding: 0.5em;
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+}
+
+#copyright {
+	font-weight: 200;
+	text-align: center;
+}
+
+
+/* Table */
+
+table {
+	width: 100%;
+	font-size: 0.9rem;
+	
+	border: 1px solid #d4d4d4;
+	border-radius: 16px;
+	border-spacing: 0 1em;
+}
+
+th {
+	border-bottom: 1px solid;
+	padding-bottom: 1em;
+}
+
+td {
+	font-size: 0.9rem;
+	font-weight: 300;
+}
+
+td:first-child {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+	max-width: 0;
+	padding-left: 1em;
+}
+
+td:last-child {
+	text-align: center;
+	padding-right: 1em;
+}
+
+
+/* Media query */
+
+@media screen and (min-width: 900px) {
+	.container {
+		margin-inline: 32%;
+	}
+}	
