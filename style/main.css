@@ -37,16 +37,25 @@ body {
 }
 
 a {
-	color: #8bb8e8;
+	color: #cec2eb;
 	font-size: 0.9rem;
 	font-weight: 400;
 	text-decoration: none;
 }
 
+a:hover {
+	font-weight: 600;
+	color: #ffffff;
+}
+
 img {
 	width: 4rem;
 	height: 4rem;
-	filter: invert(1);
+	filter: invert(85%) sepia(12%) saturate(1491%) hue-rotate(201deg) brightness(99%) contrast(87%);
+}
+
+img:hover {
+	filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(276deg) brightness(104%) contrast(103%);
 }
 
 
@@ -62,9 +71,8 @@ img {
 	text-align: center;
 
 	margin-bottom: 5em;
-	margin-inline: 1.5em;
+	margin-inline: 8%;
 }
-
 
 .subcontainer {
 	display: flex;
@@ -106,6 +114,7 @@ img {
 	text-align: center;
 }
 
+
 /* Table */
 
 table {
@@ -140,3 +149,12 @@ td:last-child {
 	text-align: center;
 	padding-right: 1em;
 }
+
+
+/* Media query */
+
+@media screen and (min-width: 900px) {
+	.container {
+		margin-inline: 32%;
+	}
+}	
