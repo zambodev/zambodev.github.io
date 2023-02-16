@@ -43,6 +43,12 @@ a {
 	text-decoration: none;
 }
 
+img {
+	width: 4rem;
+	height: 4rem;
+	filter: invert(1);
+}
+
 
 /* Container */
 
@@ -91,6 +97,8 @@ a {
 	border: 1px solid #d4d4d4;
 	border-radius: 32px;
 	padding: 0.5em;
+	padding-left: 0.8em;
+	padding-right: 0.8em;
 }
 
 #copyright {
