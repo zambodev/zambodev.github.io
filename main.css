@@ -13,6 +13,11 @@ body {
 
 /* Typography */
 
+@font-face {
+	font-family: Harshita;
+	src: url("/fonts/Harshita.otf");
+}
+
 .title {
 	font-weight: 400;
 	font-size: 1.5rem;
@@ -95,9 +100,12 @@ img:hover {
 /* Id */
 
 #mainTitle {
+	font-family: Harshita;
 	font-weight: 600;
-	font-size: 3.2rem;
-
+	font-size: 3rem;
+	
+	margin-bottom: 0em;
+	margin-top: 1 em;
 	text-align: center;
 }
 
